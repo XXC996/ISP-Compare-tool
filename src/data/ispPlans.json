@@ -1,0 +1,312 @@
+[
+  {
+    "id": "1",
+    "provider": "Telstra",
+    "logoSrc": "/assets/telstra-logo.png",
+    "name": "NBN Standard Plus Unlimited",
+    "type": "NBN",
+    "speed": {
+      "download": 50,
+      "upload": 20
+    },
+    "data": "Unlimited",
+    "contract": 0,
+    "price": 90,
+    "promoPrice": "First 6 months: $75/month",
+    "typicalSpeed": 48,
+    "setupFee": 0,
+    "modem": "$216 (included on 24-month plans)",
+    "yearCost": 990,
+    "rating": 4.1,
+    "reviewCount": 324,
+    "support": "24/7 Support",
+    "languages": "English, Mandarin",
+    "features": [
+      "No lock-in contract option",
+      "Telstra Smart Modem with 4G backup",
+      "Unlimited data",
+      "Telstra Air Wi-Fi network access"
+    ],
+    "locations": ["NSW", "VIC", "QLD", "SA", "WA", "NT", "TAS", "ACT"],
+    "availability": ["Metro", "Regional", "Rural"]
+  },
+  {
+    "id": "2",
+    "provider": "TPG",
+    "logoSrc": "/assets/tpg-logo.png",
+    "name": "NBN50 SL Bundle",
+    "type": "NBN",
+    "speed": {
+      "download": 50,
+      "upload": 20
+    },
+    "data": "Unlimited",
+    "contract": 12,
+    "price": 69.99,
+    "promoPrice": "$59.99 for first 6 months",
+    "typicalSpeed": 46,
+    "setupFee": 0,
+    "modem": "Included with 12-month contract",
+    "yearCost": 779.88,
+    "rating": 3.9,
+    "reviewCount": 198,
+    "support": "8AM-10PM Support",
+    "languages": "English",
+    "features": [
+      "PAYG home phone calls",
+      "Static IP address",
+      "Wi-Fi modem included",
+      "No setup fee on 12-month plans"
+    ],
+    "locations": ["NSW", "VIC", "QLD", "SA", "WA", "TAS", "ACT"],
+    "availability": ["Metro", "Regional"]
+  },
+  {
+    "id": "3",
+    "provider": "Aussie Broadband",
+    "logoSrc": "/assets/aussie-logo.png",
+    "name": "NBN 100/20 Unlimited",
+    "type": "NBN",
+    "speed": {
+      "download": 100,
+      "upload": 20
+    },
+    "data": "Unlimited",
+    "contract": 0,
+    "price": 99,
+    "promoPrice": "$89 for first 6 months with code",
+    "typicalSpeed": 95,
+    "setupFee": 0,
+    "modem": "$149 (optional)",
+    "yearCost": 1128,
+    "rating": 4.8,
+    "reviewCount": 520,
+    "support": "Australia-based 24/7 Support",
+    "languages": "English",
+    "features": [
+      "Australian-based support",
+      "No lock-in contract",
+      "Carbon neutral certified",
+      "99% uptime guarantee"
+    ],
+    "locations": ["NSW", "VIC", "QLD", "SA", "WA", "NT", "TAS", "ACT"],
+    "availability": ["Metro", "Regional", "Rural"]
+  },
+  {
+    "id": "4",
+    "provider": "Optus",
+    "logoSrc": "/assets/optus-logo.png",
+    "name": "Internet Everyday NBN 100",
+    "type": "NBN",
+    "speed": {
+      "download": 100,
+      "upload": 20
+    },
+    "data": "Unlimited",
+    "contract": 0,
+    "price": 89,
+    "promoPrice": "$79 for first 6 months",
+    "typicalSpeed": 90,
+    "setupFee": 0,
+    "modem": "$252 (included on 24-month plans)",
+    "yearCost": 1008,
+    "rating": 4.0,
+    "reviewCount": 287,
+    "support": "24/7 Support",
+    "languages": "English, Mandarin, Hindi",
+    "features": [
+      "Wi-Fi Booster available",
+      "Optus Sport included",
+      "No lock-in contract option",
+      "4G backup on modem"
+    ],
+    "locations": ["NSW", "VIC", "QLD", "SA", "WA", "NT", "TAS", "ACT"],
+    "availability": ["Metro", "Regional"]
+  },
+  {
+    "id": "5",
+    "provider": "iiNet",
+    "logoSrc": "/assets/iinet-logo.png",
+    "name": "NBN50 Liimitless",
+    "type": "NBN",
+    "speed": {
+      "download": 50,
+      "upload": 20
+    },
+    "data": "Unlimited",
+    "contract": 0,
+    "price": 74.99,
+    "promoPrice": "$69.99 for first 6 months",
+    "typicalSpeed": 46,
+    "setupFee": 0,
+    "modem": "$99.95 setup fee (waived on 6-month plans)",
+    "yearCost": 869.88,
+    "rating": 3.9,
+    "reviewCount": 176,
+    "support": "8AM-11PM Support",
+    "languages": "English",
+    "features": [
+      "Fetch TV bundles available",
+      "No lock-in contract option",
+      "Modem included on 6-month plans",
+      "Anytime calls available"
+    ],
+    "locations": ["NSW", "VIC", "QLD", "SA", "WA", "TAS", "ACT"],
+    "availability": ["Metro", "Regional"]
+  },
+  {
+    "id": "6",
+    "provider": "Exetel",
+    "logoSrc": "/assets/exetel-logo.png",
+    "name": "NBN Standard Plus (NBN 50)",
+    "type": "NBN",
+    "speed": {
+      "download": 50,
+      "upload": 20
+    },
+    "data": "Unlimited",
+    "contract": 12,
+    "price": 65.99,
+    "promoPrice": "$59.99 for first 3 months",
+    "typicalSpeed": 45,
+    "setupFee": 0,
+    "modem": "$99 (optional)",
+    "yearCost": 773.88,
+    "rating": 3.8,
+    "reviewCount": 145,
+    "support": "8AM-10PM Support",
+    "languages": "English",
+    "features": [
+      "Free static IP",
+      "Free premium evening speeds",
+      "Option to add Gamer Pro",
+      "Easy plan changes"
+    ],
+    "locations": ["NSW", "VIC", "QLD", "SA", "WA", "TAS", "ACT"],
+    "availability": ["Metro", "Regional"]
+  },
+  {
+    "id": "7",
+    "provider": "Vodafone",
+    "logoSrc": "/assets/vodafone-logo.png",
+    "name": "NBN Superfast",
+    "type": "NBN",
+    "speed": {
+      "download": 100,
+      "upload": 40
+    },
+    "data": "Unlimited",
+    "contract": 0,
+    "price": 85,
+    "promoPrice": "$75 for first 6 months",
+    "typicalSpeed": 92,
+    "setupFee": 0,
+    "modem": "$180 (included on 24-month plans)",
+    "yearCost": 960,
+    "rating": 3.7,
+    "reviewCount": 156,
+    "support": "24/7 Support",
+    "languages": "English, Hindi, Spanish",
+    "features": [
+      "4G backup",
+      "Smart Modem included",
+      "Bundle discounts with mobile",
+      "No lock-in contract option"
+    ],
+    "locations": ["NSW", "VIC", "QLD", "SA", "WA", "TAS", "ACT"],
+    "availability": ["Metro", "Regional"]
+  },
+  {
+    "id": "8",
+    "provider": "Belong",
+    "logoSrc": "/assets/belong-logo.png",
+    "name": "Standard Plus NBN Plan",
+    "type": "NBN",
+    "speed": {
+      "download": 50,
+      "upload": 20
+    },
+    "data": "Unlimited",
+    "contract": 0,
+    "price": 70,
+    "promoPrice": "$65 for first 12 months",
+    "typicalSpeed": 47,
+    "setupFee": 0,
+    "modem": "$60 (optional)",
+    "yearCost": 810,
+    "rating": 3.9,
+    "reviewCount": 132,
+    "support": "8AM-10PM Support",
+    "languages": "English",
+    "features": [
+      "Carbon neutral",
+      "No lock-in contracts",
+      "Free mobile credit",
+      "Simple online management"
+    ],
+    "locations": ["NSW", "VIC", "QLD", "SA", "WA", "NT", "TAS", "ACT"],
+    "availability": ["Metro", "Regional"]
+  },
+  {
+    "id": "9",
+    "provider": "Superloop",
+    "logoSrc": "/assets/superloop-logo.png",
+    "name": "Home Fast 100",
+    "type": "NBN",
+    "speed": {
+      "download": 100,
+      "upload": 20
+    },
+    "data": "Unlimited",
+    "contract": 0,
+    "price": 85,
+    "promoPrice": "$75 for first 6 months",
+    "typicalSpeed": 93,
+    "setupFee": 0,
+    "modem": "$99.95 (optional)",
+    "yearCost": 960,
+    "rating": 4.3,
+    "reviewCount": 118,
+    "support": "Australia-based Support",
+    "languages": "English",
+    "features": [
+      "Australian owned",
+      "Australian support",
+      "No lock-in contract",
+      "Own infrastructure"
+    ],
+    "locations": ["NSW", "VIC", "QLD", "SA", "WA", "TAS", "ACT"],
+    "availability": ["Metro", "Regional"]
+  },
+  {
+    "id": "10",
+    "provider": "Tangerine",
+    "logoSrc": "/assets/tangerine-logo.png",
+    "name": "XL Speed Boost",
+    "type": "NBN",
+    "speed": {
+      "download": 50,
+      "upload": 20
+    },
+    "data": "Unlimited",
+    "contract": 0,
+    "price": 69.90,
+    "promoPrice": "$54.90 for first 6 months",
+    "typicalSpeed": 48,
+    "setupFee": 0,
+    "modem": "$129.90 (optional)",
+    "yearCost": 749.40,
+    "rating": 4.2,
+    "reviewCount": 98,
+    "support": "7AM-11PM Support",
+    "languages": "English",
+    "features": [
+      "14-day free trial",
+      "No lock-in contract",
+      "Risk-free guarantee",
+      "Australian customer service"
+    ],
+    "locations": ["NSW", "VIC", "QLD", "SA", "WA", "TAS", "ACT"],
+    "availability": ["Metro", "Regional"]
+  }
+] 

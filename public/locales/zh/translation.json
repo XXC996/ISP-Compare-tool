@@ -1,0 +1,89 @@
+{
+  "header": {
+    "home": "首页",
+    "plans": "套餐",
+    "compare": "比较",
+    "about": "关于我们",
+    "contact": "联系方式"
+  },
+  "hero": {
+    "title": "找到您理想的网络服务提供商",
+    "subtitle": "比较各大提供商的价格、速度和功能",
+    "cta": "开始比较",
+    "postcodeInput": "请输入邮编",
+    "checkingAvailability": "正在检查邮编的可用性",
+    "invalidPostcode": "请输入有效的4位数澳大利亚邮编"
+  },
+  "filters": {
+    "location": "位置",
+    "speed": "速度",
+    "price": "价格",
+    "rating": "评分",
+    "apply": "应用筛选",
+    "planType": "套餐类型",
+    "allTypes": "所有类型",
+    "5gHome": "5G家庭宽带",
+    "speedTier": "速度等级",
+    "allSpeeds": "所有速度",
+    "contractType": "合约类型",
+    "allContracts": "所有合约",
+    "monthToMonth": "按月付费",
+    "12Months": "12个月",
+    "24Months": "24个月",
+    "sortBy": "排序方式",
+    "monthlyPrice": "月费",
+    "typicalSpeed": "典型晚间速度",
+    "customerRating": "客户评分",
+    "value": "价值($/Mbps)"
+  },
+  "comparison": {
+    "title": "套餐比较",
+    "monthly": "月费",
+    "speed": "网速",
+    "data": "数据限制",
+    "contract": "合约期限",
+    "viewDetails": "查看详情",
+    "select": "选择",
+    "reviews": "评价",
+    "setupFee": "安装费",
+    "modem": "调制解调器",
+    "yearCost": "12个月费用"
+  },
+  "features": {
+    "title": "为什么选择我们的比较服务？",
+    "accurate": "精确比较",
+    "comprehensive": "全面数据",
+    "unbiased": "公正结果",
+    "aiRecommendations": "AI智能推荐",
+    "aiDescription": "根据您的使用习惯和位置获取个性化推荐",
+    "multilanguage": "多语言支持",
+    "multilanguageDescription": "使用您偏好的语言比较套餐",
+    "priceUpdates": "实时价格更新",
+    "priceUpdatesDescription": "我们定期更新所有主要提供商的价格和促销信息",
+    "reviews": "已验证评价",
+    "reviewsDescription": "在做决定前阅读来自多个来源的真实客户评价"
+  },
+  "faq": {
+    "title": "常见问题",
+    "comparePlans": "我们如何比较互联网套餐？",
+    "comparePlansAnswer": "我们基于月费、合约期限、安装费、典型晚间速度和客户评价来比较套餐。我们的算法通过分析每兆比特的成本和合约期内的总成本来计算出最具价值的套餐。",
+    "speedTiers": "NBN速度等级有什么区别？",
+    "speedTiersAnswer": "NBN套餐按最大下载速度分类：NBN 25（25 Mbps）、NBN 50（50 Mbps）、NBN 100（100 Mbps）和NBN 250（250 Mbps）。更高等级提供更快的速度但费用更高。对于普通家庭，NBN 50足以满足高清流媒体和多设备使用需求。",
+    "priceUpdate": "价格多久更新一次？",
+    "priceUpdateAnswer": "我们定期更新价格信息以确保准确性。大多数主要提供商每天更新，而小型提供商可能每周更新。每个比较列表都显示价格的最后验证时间。",
+    "switchProviders": "如果我正在合约期内，可以更换提供商吗？",
+    "switchProvidersAnswer": "可以，但您可能需要支付提前终止费用。我们的比较工具可以帮助您计算更换带来的节省是否超过终止费用。一些新的提供商还提供支付转换费用作为他们的注册优惠。"
+  },
+  "newsletter": {
+    "title": "保持更新",
+    "subtitle": "直接接收最新的网络服务提供商优惠和新闻",
+    "placeholder": "您的电子邮箱",
+    "button": "订阅"
+  },
+  "footer": {
+    "rights": "版权所有",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "contact": "联系我们"
+  }
+} 
