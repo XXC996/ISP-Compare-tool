@@ -2,6 +2,15 @@
 
 A React-based comparison website for ISPs and utilities, now with TypeScript and internationalization (i18n) support.
 
+## Testing Branch
+
+This is the testing branch where we can experiment with new features without affecting the main codebase.
+
+Current experimental features:
+- Multi-language support (English, Chinese, Hindi, Spanish)
+- Support language filter
+- Operation hours filter
+
 ## Features
 
 - TypeScript integration for improved type safety and development experience
