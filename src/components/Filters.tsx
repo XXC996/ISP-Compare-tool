@@ -13,7 +13,9 @@ const Filters: React.FC<FiltersProps> = ({ onFilterChange }) => {
     contractType: 'all',
     sortBy: 'price',
     location: 'all',
-    availability: 'all'
+    availability: 'all',
+    language: 'all',
+    operationHours: 'all'
   });
 
   const handleFilterChange = (e) => {
@@ -100,6 +102,36 @@ const Filters: React.FC<FiltersProps> = ({ onFilterChange }) => {
             <option value="TAS">TAS</option>
             <option value="NT">NT</option>
             <option value="ACT">ACT</option>
+          </select>
+        </div>
+        <div className="filter-group">
+          <label>{t('filters.language', 'Support Language')}</label>
+          <select 
+            name="language" 
+            value={filters.language} 
+            onChange={handleFilterChange}
+          >
+            <option value="all">{t('filters.allLanguages', 'All Languages')}</option>
+            <option value="en">{t('filters.english', 'English')}</option>
+            <option value="zh">{t('filters.chinese', 'Chinese')}</option>
+            <option value="hi">{t('filters.hindi', 'Hindi')}</option>
+            <option value="es">{t('filters.spanish', 'Spanish')}</option>
+            <option value="ar">{t('filters.arabic', 'Arabic')}</option>
+            <option value="vi">{t('filters.vietnamese', 'Vietnamese')}</option>
+          </select>
+        </div>
+        <div className="filter-group">
+          <label>{t('filters.operationHours', 'Operation Hours')}</label>
+          <select 
+            name="operationHours" 
+            value={filters.operationHours} 
+            onChange={handleFilterChange}
+          >
+            <option value="all">{t('filters.allHours', 'All Hours')}</option>
+            <option value="24_7">{t('filters.24_7', '24/7 Support')}</option>
+            <option value="business">{t('filters.businessHours', 'Business Hours')}</option>
+            <option value="extended">{t('filters.extendedHours', 'Extended Hours')}</option>
+            <option value="weekend">{t('filters.weekendSupport', 'Weekend Support')}</option>
           </select>
         </div>
         <div className="filter-group">
