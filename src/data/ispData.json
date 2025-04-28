@@ -1,0 +1,484 @@
+{
+  "providers": [
+    {
+      "id": "telstra",
+      "name": "Telstra",
+      "logo": "/assets/telstra-logo.png",
+      "googleReviews": {
+        "score": 1.7,
+        "count": 2125
+      },
+      "supportedLanguages": ["English"],
+      "operationHours": {
+        "sales": "Mon-Fri: 8am–7pm",
+        "customerService": "Mon-Fri: 8am–7pm",
+        "technicalSupport": "24/7 (via My Telstra app & online chat)",
+        "closedDays": "None"
+      },
+      "supportChannels": {
+        "phone": true,
+        "liveChat": true,
+        "email": true,
+        "socialMedia": "Not specified",
+        "other": "My Telstra App"
+      },
+      "networkTypes": {
+        "nbn": true,
+        "opticomm": false,
+        "redtrain": false,
+        "supa": false
+      },
+      "plans": {
+        "12M": {
+          "rrpPrice": 89,
+          "discountPrice": 89,
+          "typicalEveningSpeed": "---",
+          "downloadUpload": "---"
+        },
+        "25M": {
+          "rrpPrice": 89,
+          "discountPrice": 89,
+          "typicalEveningSpeed": "25/4",
+          "downloadUpload": "25/4"
+        },
+        "50M": {
+          "rrpPrice": 105,
+          "discountPrice": 100,
+          "typicalEveningSpeed": "50/17",
+          "downloadUpload": "50/17"
+        },
+        "100M": {
+          "rrpPrice": 110,
+          "discountPrice": 100,
+          "typicalEveningSpeed": "100/17",
+          "downloadUpload": "100/17"
+        },
+        "100/40M": {
+          "rrpPrice": "---",
+          "discountPrice": "---",
+          "typicalEveningSpeed": "---",
+          "downloadUpload": "---"
+        },
+        "250M": {
+          "rrpPrice": 130,
+          "discountPrice": 115,
+          "typicalEveningSpeed": "250/22",
+          "downloadUpload": "250/22"
+        },
+        "500M": {
+          "rrpPrice": "---",
+          "discountPrice": "---",
+          "typicalEveningSpeed": "---",
+          "downloadUpload": "---"
+        },
+        "1000M": {
+          "rrpPrice": 150,
+          "discountPrice": 130,
+          "typicalEveningSpeed": "700/40",
+          "downloadUpload": "700/40"
+        }
+      }
+    },
+    {
+      "id": "tpg",
+      "name": "TPG",
+      "logo": "/assets/tpg-logo.png",
+      "googleReviews": {
+        "score": "---",
+        "count": "---"
+      },
+      "supportedLanguages": ["English"],
+      "operationHours": {
+        "sales": "---",
+        "customerService": "---",
+        "technicalSupport": "---",
+        "closedDays": "---"
+      },
+      "supportChannels": {
+        "phone": true,
+        "liveChat": "---",
+        "email": "---",
+        "socialMedia": "---",
+        "other": "---"
+      },
+      "networkTypes": {
+        "nbn": true,
+        "opticomm": false,
+        "redtrain": false,
+        "supa": false
+      },
+      "plans": {
+        "12M": {
+          "rrpPrice": "---",
+          "discountPrice": "---",
+          "typicalEveningSpeed": "12/0.8",
+          "downloadUpload": "12/0.8"
+        },
+        "25M": {
+          "rrpPrice": 74.99,
+          "discountPrice": 74.99,
+          "typicalEveningSpeed": "25/4",
+          "downloadUpload": "25/4"
+        },
+        "50M": {
+          "rrpPrice": 79.99,
+          "discountPrice": 79.99,
+          "typicalEveningSpeed": "50/17",
+          "downloadUpload": "50/17"
+        },
+        "100M": {
+          "rrpPrice": 89.99,
+          "discountPrice": 79.99,
+          "typicalEveningSpeed": "100/17",
+          "downloadUpload": "100/17"
+        },
+        "100/40M": {
+          "rrpPrice": "---",
+          "discountPrice": "---",
+          "typicalEveningSpeed": "---",
+          "downloadUpload": "---"
+        },
+        "250M": {
+          "rrpPrice": 94.99,
+          "discountPrice": 94.99,
+          "typicalEveningSpeed": "250/21",
+          "downloadUpload": "250/21"
+        },
+        "500M": {
+          "rrpPrice": "---",
+          "discountPrice": "---",
+          "typicalEveningSpeed": "---",
+          "downloadUpload": "---"
+        },
+        "1000M": {
+          "rrpPrice": 104.99,
+          "discountPrice": 104.99,
+          "typicalEveningSpeed": "800/40",
+          "downloadUpload": "800/40"
+        }
+      }
+    },
+    {
+      "id": "optus",
+      "name": "Optus",
+      "logo": "/assets/optus-logo.png",
+      "googleReviews": {
+        "score": 1.2,
+        "count": 73
+      },
+      "supportedLanguages": ["English", "Arabic", "Chinese (Mandarin and Cantonese)", "Hindi", "Korean", "Punjabi", "Tamil", "Vietnamese"],
+      "operationHours": {
+        "sales": "Mon-Fri: 8am–9pm, Sat: 9am–7pm, Sun: 9am–6pm",
+        "customerService": "Mon-Fri: 8am–8pm, Sat: 9am–5pm",
+        "technicalSupport": "8am–8pm, 7 days a week",
+        "closedDays": "None (24/7 support via chat)"
+      },
+      "supportChannels": {
+        "phone": true,
+        "liveChat": true,
+        "email": true,
+        "socialMedia": "Yes",
+        "other": "My Optus App"
+      },
+      "networkTypes": {
+        "nbn": true,
+        "opticomm": false,
+        "redtrain": false,
+        "supa": false
+      },
+      "plans": {
+        "12M": {
+          "rrpPrice": "---",
+          "discountPrice": "---",
+          "typicalEveningSpeed": "---",
+          "downloadUpload": "---"
+        },
+        "25M": {
+          "rrpPrice": 75,
+          "discountPrice": 75,
+          "typicalEveningSpeed": "25/4",
+          "downloadUpload": "25/4"
+        },
+        "50M": {
+          "rrpPrice": 89,
+          "discountPrice": 89,
+          "typicalEveningSpeed": "50/18",
+          "downloadUpload": "50/18"
+        },
+        "100M": {
+          "rrpPrice": 99,
+          "discountPrice": 89,
+          "typicalEveningSpeed": "100/18",
+          "downloadUpload": "100/18"
+        },
+        "100/40M": {
+          "rrpPrice": "---",
+          "discountPrice": "---",
+          "typicalEveningSpeed": "---",
+          "downloadUpload": "---"
+        },
+        "250M": {
+          "rrpPrice": 119,
+          "discountPrice": 99,
+          "typicalEveningSpeed": "245/22",
+          "downloadUpload": "245/22"
+        },
+        "500M": {
+          "rrpPrice": "---",
+          "discountPrice": "---",
+          "typicalEveningSpeed": "---",
+          "downloadUpload": "---"
+        },
+        "1000M": {
+          "rrpPrice": 129,
+          "discountPrice": 109,
+          "typicalEveningSpeed": "780/40",
+          "downloadUpload": "780/40"
+        }
+      }
+    },
+    {
+      "id": "abb",
+      "name": "Aussie Broadband",
+      "logo": "/assets/aussie-logo.png",
+      "googleReviews": {
+        "score": 4.5,
+        "count": 9006
+      },
+      "supportedLanguages": ["English"],
+      "operationHours": {
+        "sales": "Mon-Fri: 8am–10pm, Sat-Sun: 9am–6pm",
+        "customerService": "8am–midnight, 7 days a week",
+        "technicalSupport": "8am–midnight, 7 days a week",
+        "closedDays": "Christmas Day, Good Friday"
+      },
+      "supportChannels": {
+        "phone": true,
+        "liveChat": true,
+        "email": true,
+        "socialMedia": "Not specified",
+        "other": "MyAussie App"
+      },
+      "networkTypes": {
+        "nbn": true,
+        "opticomm": true,
+        "redtrain": false,
+        "supa": false
+      },
+      "plans": {
+        "12M": {
+          "rrpPrice": 69,
+          "discountPrice": 69,
+          "typicalEveningSpeed": "---",
+          "downloadUpload": "---"
+        },
+        "25M": {
+          "rrpPrice": 79,
+          "discountPrice": 79,
+          "typicalEveningSpeed": "24/8",
+          "downloadUpload": "24/8"
+        },
+        "50M": {
+          "rrpPrice": 89,
+          "discountPrice": 89,
+          "typicalEveningSpeed": "49/16",
+          "downloadUpload": "49/16"
+        },
+        "100M": {
+          "rrpPrice": 95,
+          "discountPrice": 85,
+          "typicalEveningSpeed": "99/16",
+          "downloadUpload": "99/16"
+        },
+        "100/40M": {
+          "rrpPrice": 105,
+          "discountPrice": 95,
+          "typicalEveningSpeed": "98/34",
+          "downloadUpload": "98/34"
+        },
+        "250M": {
+          "rrpPrice": 119,
+          "discountPrice": 99,
+          "typicalEveningSpeed": "248/21",
+          "downloadUpload": "248/21"
+        },
+        "500M": {
+          "rrpPrice": "---",
+          "discountPrice": "---",
+          "typicalEveningSpeed": "---",
+          "downloadUpload": "---"
+        },
+        "1000M": {
+          "rrpPrice": 129,
+          "discountPrice": 109,
+          "typicalEveningSpeed": "875/42",
+          "downloadUpload": "875/42"
+        }
+      }
+    },
+    {
+      "id": "superloop",
+      "name": "Superloop",
+      "logo": "/assets/superloop-logo.png",
+      "googleReviews": {
+        "score": 4.5,
+        "count": 1900
+      },
+      "supportedLanguages": ["English"],
+      "operationHours": {
+        "sales": "---",
+        "customerService": "---",
+        "technicalSupport": "---",
+        "closedDays": "---"
+      },
+      "supportChannels": {
+        "phone": "---",
+        "liveChat": "---",
+        "email": "---",
+        "socialMedia": "---",
+        "other": "---"
+      },
+      "networkTypes": {
+        "nbn": true,
+        "opticomm": true,
+        "redtrain": true,
+        "supa": false
+      },
+      "plans": {
+        "12M": {
+          "rrpPrice": "---",
+          "discountPrice": "---",
+          "typicalEveningSpeed": "---",
+          "downloadUpload": "---"
+        },
+        "25M": {
+          "rrpPrice": 69,
+          "discountPrice": 59,
+          "typicalEveningSpeed": "25/5",
+          "downloadUpload": "25/5"
+        },
+        "50M": {
+          "rrpPrice": 81,
+          "discountPrice": 67,
+          "typicalEveningSpeed": "50/17",
+          "downloadUpload": "50/17"
+        },
+        "100M": {
+          "rrpPrice": 89,
+          "discountPrice": 75,
+          "typicalEveningSpeed": "98/17",
+          "downloadUpload": "98/17"
+        },
+        "100/40M": {
+          "rrpPrice": 95,
+          "discountPrice": 79,
+          "typicalEveningSpeed": "98/34",
+          "downloadUpload": "98/34"
+        },
+        "250M": {
+          "rrpPrice": 99,
+          "discountPrice": 85,
+          "typicalEveningSpeed": "250/21",
+          "downloadUpload": "250/21"
+        },
+        "500M": {
+          "rrpPrice": "---",
+          "discountPrice": "---",
+          "typicalEveningSpeed": "---",
+          "downloadUpload": "---"
+        },
+        "1000M": {
+          "rrpPrice": 109,
+          "discountPrice": 99,
+          "typicalEveningSpeed": "811/42",
+          "downloadUpload": "811/42"
+        }
+      }
+    },
+    {
+      "id": "occom",
+      "name": "Occom",
+      "logo": "/assets/occom-logo.png",
+      "googleReviews": {
+        "score": 4.5,
+        "count": 780
+      },
+      "supportedLanguages": ["English", "Chinese (Mandarin and Cantonese)", "Hindi/Punjabi", "Malay", "Korean", "Vietnamese"],
+      "operationHours": {
+        "sales": "Daily 8am–10pm",
+        "customerService": "Daily 8am–10pm",
+        "technicalSupport": "Daily 8am–10pm",
+        "closedDays": "365 days"
+      },
+      "supportChannels": {
+        "phone": true,
+        "liveChat": true,
+        "email": true,
+        "socialMedia": "WhatsApp, FB Messenger, WeChat",
+        "other": "---"
+      },
+      "networkTypes": {
+        "nbn": true,
+        "opticomm": true,
+        "redtrain": true,
+        "supa": true
+      },
+      "plans": {
+        "12M": {
+          "rrpPrice": 58,
+          "discountPrice": 58,
+          "typicalEveningSpeed": "12/4",
+          "downloadUpload": "12/4"
+        },
+        "25M": {
+          "rrpPrice": 70,
+          "discountPrice": 65,
+          "typicalEveningSpeed": "25/8",
+          "downloadUpload": "25/8"
+        },
+        "50M": {
+          "rrpPrice": 85,
+          "discountPrice": 75,
+          "typicalEveningSpeed": "50/17",
+          "downloadUpload": "50/17"
+        },
+        "100M": {
+          "rrpPrice": 90,
+          "discountPrice": 80,
+          "typicalEveningSpeed": "100/17",
+          "downloadUpload": "100/17"
+        },
+        "100/40M": {
+          "rrpPrice": "---",
+          "discountPrice": "---",
+          "typicalEveningSpeed": "100/36",
+          "downloadUpload": "100/36"
+        },
+        "250M": {
+          "rrpPrice": 110,
+          "discountPrice": 95,
+          "typicalEveningSpeed": "250/20",
+          "downloadUpload": "250/20"
+        },
+        "500M": {
+          "rrpPrice": "---",
+          "discountPrice": "---",
+          "typicalEveningSpeed": "500/170",
+          "downloadUpload": "500/170"
+        },
+        "1000M": {
+          "rrpPrice": 125,
+          "discountPrice": 115,
+          "typicalEveningSpeed": "830/43",
+          "downloadUpload": "830/43"
+        },
+        "1000/400M": {
+          "rrpPrice": "---",
+          "discountPrice": "---",
+          "typicalEveningSpeed": "800/336",
+          "downloadUpload": "800/336"
+        }
+      }
+    }
+  ]
+} 

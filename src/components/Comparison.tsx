@@ -15,9 +15,18 @@ interface ComparisonProps {
   };
 }
 
+// 确保ispData与ISPPlan类型兼容
+const transformedData: ISPPlan[] = ispData.map(plan => ({
+  ...plan,
+  rrpPrice: plan.price,
+  discountPrice: plan.promoPrice ? parseFloat(plan.promoPrice.match(/\d+\.\d+|\d+/)[0]) : plan.price,
+  typicalEveningSpeed: `${plan.typicalSpeed}/${plan.speed.upload}`,
+  downloadUpload: `${plan.speed.download}/${plan.speed.upload}`
+}));
+
 const Comparison: React.FC<ComparisonProps> = ({ filters: propFilters }) => {
   const { t } = useTranslation();
-  const [plans, setPlans] = useState<ISPPlan[]>(ispData);
+  const [plans, setPlans] = useState<ISPPlan[]>(transformedData);
   const [filteredPlans, setFilteredPlans] = useState<ISPPlan[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [filters, setFilters] = useState({
