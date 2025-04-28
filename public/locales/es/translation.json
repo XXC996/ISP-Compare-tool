@@ -1,0 +1,89 @@
+{
+  "header": {
+    "home": "Inicio",
+    "plans": "Planes",
+    "compare": "Comparar",
+    "about": "Acerca de",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Encuentra tu Plan de ISP Perfecto",
+    "subtitle": "Compara precios, velocidades y características de los principales proveedores",
+    "cta": "Comenzar a Comparar",
+    "postcodeInput": "Ingresa tu código postal",
+    "checkingAvailability": "Verificando disponibilidad para el código postal",
+    "invalidPostcode": "Por favor, ingresa un código postal australiano válido de 4 dígitos"
+  },
+  "filters": {
+    "location": "Ubicación",
+    "speed": "Velocidad",
+    "price": "Precio",
+    "rating": "Calificación",
+    "apply": "Aplicar Filtros",
+    "planType": "Tipo de Plan",
+    "allTypes": "Todos los Tipos",
+    "5gHome": "Internet 5G para el Hogar",
+    "speedTier": "Nivel de Velocidad",
+    "allSpeeds": "Todas las Velocidades",
+    "contractType": "Tipo de Contrato",
+    "allContracts": "Todos los Contratos",
+    "monthToMonth": "Mes a Mes",
+    "12Months": "12 Meses",
+    "24Months": "24 Meses",
+    "sortBy": "Ordenar Por",
+    "monthlyPrice": "Precio Mensual",
+    "typicalSpeed": "Velocidad Típica en Horario Pico",
+    "customerRating": "Calificación de Clientes",
+    "value": "Valor ($ por Mbps)"
+  },
+  "comparison": {
+    "title": "Comparar Planes",
+    "monthly": "Costo mensual",
+    "speed": "Velocidad",
+    "data": "Límite de datos",
+    "contract": "Contrato",
+    "viewDetails": "Ver Detalles",
+    "select": "Seleccionar",
+    "reviews": "reseñas",
+    "setupFee": "Tarifa de Instalación",
+    "modem": "Módem",
+    "yearCost": "Costo por 12 meses"
+  },
+  "features": {
+    "title": "¿Por qué Elegir Nuestro Servicio de Comparación?",
+    "accurate": "Comparaciones Precisas",
+    "comprehensive": "Datos Completos",
+    "unbiased": "Resultados Imparciales",
+    "aiRecommendations": "Recomendaciones Impulsadas por IA",
+    "aiDescription": "Recibe recomendaciones personalizadas basadas en tus patrones de uso y ubicación",
+    "multilanguage": "Soporte Multilingüe",
+    "multilanguageDescription": "Compara planes en tu idioma preferido con nuestro servicio de traducción",
+    "priceUpdates": "Actualizaciones de Precios en Tiempo Real",
+    "priceUpdatesDescription": "Actualizamos regularmente los precios y promociones de todos los principales proveedores",
+    "reviews": "Reseñas Verificadas",
+    "reviewsDescription": "Lee reseñas reales de clientes de múltiples fuentes antes de tomar una decisión"
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "comparePlans": "¿Cómo comparamos los planes de internet?",
+    "comparePlansAnswer": "Comparamos los planes basándonos en el precio mensual, duración del contrato, tarifas de instalación, velocidades típicas en horario pico y reseñas de clientes. Nuestro algoritmo calcula los mejores planes en términos de valor analizando el costo por Mbps y el costo total durante el período del contrato.",
+    "speedTiers": "¿Cuál es la diferencia entre los niveles de velocidad NBN?",
+    "speedTiersAnswer": "Los planes NBN se categorizan por velocidades máximas de descarga: NBN 25 (25 Mbps), NBN 50 (50 Mbps), NBN 100 (100 Mbps) y NBN 250 (250 Mbps). Los niveles más altos ofrecen velocidades más rápidas pero cuestan más. Para hogares promedio, NBN 50 es suficiente para streaming HD y múltiples dispositivos.",
+    "priceUpdate": "¿Con qué frecuencia se actualizan los precios?",
+    "priceUpdateAnswer": "Actualizamos nuestra información de precios regularmente para garantizar la precisión. La mayoría de los proveedores principales se actualizan diariamente, mientras que los proveedores más pequeños pueden actualizarse semanalmente. Cada listado de comparación muestra cuándo se verificó el precio por última vez.",
+    "switchProviders": "¿Puedo cambiar de proveedor si estoy en un contrato?",
+    "switchProvidersAnswer": "Sí, pero es posible que debas pagar una tarifa por terminación anticipada. Nuestra herramienta de comparación puede ayudarte a calcular si los ahorros del cambio superan las tarifas de terminación. Algunos nuevos proveedores también ofrecen cubrir los costos de cambio como parte de sus incentivos de registro."
+  },
+  "newsletter": {
+    "title": "Mantente Actualizado",
+    "subtitle": "Recibe las últimas ofertas y noticias de ISP directamente en tu bandeja de entrada",
+    "placeholder": "Tu dirección de correo electrónico",
+    "button": "Suscribirse"
+  },
+  "footer": {
+    "rights": "Todos los Derechos Reservados",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio",
+    "contact": "Contáctanos"
+  }
+} 
