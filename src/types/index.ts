@@ -22,8 +22,6 @@ export interface ISPPlan {
   reviewCount: number;
   support?: string;
   languages?: string;
-  locations: string[]; // State/territory codes like NSW, VIC, etc.
-  availability: string[]; // Metro, Regional, Rural
   rrpPrice: number | string;
   discountPrice: number | string;
   typicalEveningSpeed: string;
@@ -42,7 +40,6 @@ export interface IspTable {
 }
 
 export interface FilterOptions {
-  location: string;
   minSpeed: number;
   maxPrice: number;
   minRating: number;

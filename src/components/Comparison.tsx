@@ -10,8 +10,6 @@ interface ComparisonProps {
     speedTier: string;
     contractType: string;
     sortBy: string;
-    location: string;
-    availability: string;
   };
 }
 
@@ -33,8 +31,6 @@ const Comparison: React.FC<ComparisonProps> = ({ filters: propFilters }) => {
     planType: 'all',
     speedTier: 'all',
     contractType: 'all',
-    location: 'all',
-    availability: 'all',
     sortBy: 'price'
   });
 
@@ -89,20 +85,6 @@ const Comparison: React.FC<ComparisonProps> = ({ filters: propFilters }) => {
       };
       const selectedContract = contractMap[filters.contractType];
       result = result.filter(plan => plan.contract === selectedContract);
-    }
-
-    // Location filtering
-    if (filters.location !== 'all') {
-      result = result.filter(plan => 
-        plan.locations.includes(filters.location)
-      );
-    }
-
-    // Availability filtering
-    if (filters.availability !== 'all') {
-      result = result.filter(plan => 
-        plan.availability.includes(filters.availability)
-      );
     }
 
     // Apply sorting
