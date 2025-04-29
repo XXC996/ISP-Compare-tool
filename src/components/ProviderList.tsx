@@ -58,14 +58,22 @@ const ProviderList: React.FC<ProviderListProps> = ({
       });
     }
     
-    // 筛选支持的语言
+    // 筛选支持的语言 - 增强的过滤逻辑
     if (filters.language.length > 0) {
       result = result.filter(provider => {
-        return filters.language.some(lang => 
-          provider.supportedLanguages.some(supported => 
-            supported.toLowerCase().includes(lang.toLowerCase())
-          )
-        );
+        // 提供商必须支持所有选定的语言
+        return filters.language.every(selectedLang => {
+          return provider.supportedLanguages.some(supported => {
+            // 语言名称标准化 (例如: "Chinese (Mandarin and Cantonese)" 应匹配 "Chinese")
+            if (selectedLang === 'Chinese') {
+              return supported.includes('Chinese') || supported.includes('Mandarin') || supported.includes('Cantonese');
+            } else if (selectedLang === 'Hindi') {
+              return supported.includes('Hindi') || supported.includes('Punjabi');
+            } else {
+              return supported.toLowerCase().includes(selectedLang.toLowerCase());
+            }
+          });
+        });
       });
     }
     

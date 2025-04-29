@@ -301,6 +301,9 @@ const AdvancedFilters: React.FC<AdvancedFiltersProps> = ({
       
       <div className="filter-section">
         <h3>{t('filters.supportedLanguages')}</h3>
+        <p className="filter-description">
+          {t('filters.languageDescription', '只会显示支持所有已选语言的提供商')}
+        </p>
         <div className="checkbox-grid">
           {languages.map((language) => (
             <label key={language.value} className="checkbox-label">

@@ -30,8 +30,8 @@
       },
       "plans": {
         "12M": {
-          "rrpPrice": 89,
-          "discountPrice": 89,
+          "rrpPrice": "---",
+          "discountPrice": "---",
           "typicalEveningSpeed": "---",
           "downloadUpload": "---"
         },
@@ -84,22 +84,22 @@
       "name": "TPG",
       "logo": "/assets/tpg-logo.png",
       "googleReviews": {
-        "score": "---",
-        "count": "---"
+        "score": 3.5,
+        "count": 850
       },
       "supportedLanguages": ["English"],
       "operationHours": {
-        "sales": "---",
-        "customerService": "---",
-        "technicalSupport": "---",
-        "closedDays": "---"
+        "sales": "Mon-Fri: 8am–8pm, Sat-Sun: 9am–5pm",
+        "customerService": "Mon-Fri: 8am–8pm, Sat-Sun: 9am–5pm",
+        "technicalSupport": "24/7",
+        "closedDays": "None"
       },
       "supportChannels": {
         "phone": true,
-        "liveChat": "---",
-        "email": "---",
-        "socialMedia": "---",
-        "other": "---"
+        "liveChat": true,
+        "email": true,
+        "socialMedia": "Twitter, Facebook",
+        "other": "TPG App"
       },
       "networkTypes": {
         "nbn": true,
@@ -326,17 +326,17 @@
       },
       "supportedLanguages": ["English"],
       "operationHours": {
-        "sales": "---",
-        "customerService": "---",
-        "technicalSupport": "---",
-        "closedDays": "---"
+        "sales": "Mon-Fri: 8am–8pm, Sat-Sun: 10am–6pm",
+        "customerService": "Mon-Fri: 8am–8pm, Sat-Sun: 10am–6pm",
+        "technicalSupport": "24/7",
+        "closedDays": "None"
       },
       "supportChannels": {
-        "phone": "---",
-        "liveChat": "---",
-        "email": "---",
-        "socialMedia": "---",
-        "other": "---"
+        "phone": true,
+        "liveChat": true,
+        "email": true,
+        "socialMedia": "Twitter, Facebook",
+        "other": "Superloop App"
       },
       "networkTypes": {
         "nbn": true,
