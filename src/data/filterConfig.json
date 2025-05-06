@@ -1,0 +1,81 @@
+{
+  "filters": {
+    "planType": {
+      "label": "filters.networkType",
+      "options": [
+        { "value": "all", "label": "filters.allTypes" },
+        { "value": "nbn", "label": "filters.nbn" },
+        { "value": "opticomm", "label": "filters.opticomm" },
+        { "value": "redtrain", "label": "filters.redtrain" },
+        { "value": "supa", "label": "filters.supa" }
+      ]
+    },
+    "speedTier": {
+      "label": "filters.speedTier",
+      "options": [
+        { "value": "all", "label": "filters.allSpeeds" },
+        { "value": "12M", "label": "filters.nbn12" },
+        { "value": "25M", "label": "filters.nbn25" },
+        { "value": "50M", "label": "filters.nbn50" },
+        { "value": "100M", "label": "filters.nbn100" },
+        { "value": "100/40M", "label": "filters.nbn100_40" },
+        { "value": "250M", "label": "filters.nbn250" },
+        { "value": "500M", "label": "filters.nbn500" },
+        { "value": "1000M", "label": "filters.nbn1000" }
+      ]
+    },
+    "priceTier": {
+      "label": "filters.priceTier",
+      "options": [
+        { "value": "all", "label": "filters.allPrices" },
+        { "value": "0-75", "label": "filters.under75" },
+        { "value": "75-100", "label": "filters.75to100" },
+        { "value": "100-125", "label": "filters.100to125" },
+        { "value": "125+", "label": "filters.above125" }
+      ]
+    },
+    "contractType": {
+      "label": "filters.contractType",
+      "options": [
+        { "value": "all", "label": "filters.allContracts" },
+        { "value": "0", "label": "filters.noContract" },
+        { "value": "12", "label": "filters.12months" },
+        { "value": "24", "label": "filters.24months" }
+      ]
+    },
+    "language": {
+      "label": "filters.supportedLanguages",
+      "description": "filters.languageDescription",
+      "options": [
+        { "value": "English", "label": "filters.english" },
+        { "value": "Chinese", "label": "filters.chinese" },
+        { "value": "Hindi", "label": "filters.hindi" },
+        { "value": "Punjabi", "label": "filters.punjabi" },
+        { "value": "Arabic", "label": "filters.arabic" },
+        { "value": "Korean", "label": "filters.korean" },
+        { "value": "Vietnamese", "label": "filters.vietnamese" },
+        { "value": "Tamil", "label": "filters.tamil" },
+        { "value": "Malay", "label": "filters.malay" }
+      ]
+    },
+    "operationHours": {
+      "label": "filters.operationHours",
+      "options": [
+        { "value": "all", "label": "filters.allHours" },
+        { "value": "24/7", "label": "filters.24_7" },
+        { "value": "business", "label": "filters.businessHours" },
+        { "value": "extended", "label": "filters.extendedHours" },
+        { "value": "weekend", "label": "filters.weekendSupport" }
+      ]
+    },
+    "sortBy": {
+      "label": "filters.sortBy",
+      "options": [
+        { "value": "price", "label": "filters.monthlyPrice" },
+        { "value": "speed", "label": "filters.typicalSpeed" },
+        { "value": "rating", "label": "filters.customerRating" },
+        { "value": "value", "label": "filters.value" }
+      ]
+    }
+  }
+} 
