@@ -1,4 +1,7 @@
 /* Main CSS for ISP & Utilities Comparison Website - Dark Theme with Accent Colors */
+@import './comparison.css';
+@import './ISPCalculator.css';
+@import './InternetSpeedSelector.css';
 
 /* Reset and Base Styles */
 * {
@@ -292,16 +295,50 @@ nav ul li a.active::after {
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid var(--border-color);
+    height: 100px;
 }
 
 .provider-logo img {
     max-width: 150px;
     max-height: 50px;
-    filter: brightness(0) invert(1);
+    filter: none;
 }
 
 .plan-details {
     padding: 1.5rem;
+}
+
+.plan-header {
+    margin-bottom: 0.75rem;
+}
+
+.plan-provider {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.plan-provider .provider-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    filter: none;
+}
+
+.plan-provider span {
+    font-weight: 600;
+    color: var(--accent-color-1);
+    font-size: 1rem;
+}
+
+.plan-name {
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    color: var(--white);
 }
 
 .plan-details h4 {

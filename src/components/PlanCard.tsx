@@ -52,7 +52,13 @@ const PlanCard: React.FC<PlanCardProps> = ({ plan }) => {
         <img src={plan.logoSrc} alt={plan.provider} />
       </div>
       <div className="plan-details">
-        <h4>{plan.name}</h4>
+        <div className="plan-header">
+          <div className="plan-provider">
+            <img src={plan.logoSrc} alt={plan.provider} className="provider-icon" />
+            <span>{plan.provider}</span>
+          </div>
+          <h4 className="plan-name">{plan.name}</h4>
+        </div>
         <div className="badges">
           <span className={`badge ${plan.type.toLowerCase()}`}>{plan.type}</span>
           <span className="badge speed">{plan.speed.download} Mbps</span>

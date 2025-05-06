@@ -3,7 +3,7 @@
     {
       "id": "telstra",
       "name": "Telstra",
-      "logo": "/assets/telstra-logo.png",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Telstra_logo.svg",
       "googleReviews": {
         "score": 1.7,
         "count": 2125
@@ -82,7 +82,7 @@
     {
       "id": "tpg",
       "name": "TPG",
-      "logo": "/assets/tpg-logo.png",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/0/0f/TPG_Telecom_logo.svg",
       "googleReviews": {
         "score": 3.5,
         "count": 850
@@ -161,12 +161,12 @@
     {
       "id": "optus",
       "name": "Optus",
-      "logo": "/assets/optus-logo.png",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/9/96/Optus_logo.svg",
       "googleReviews": {
         "score": 1.2,
         "count": 73
       },
-      "supportedLanguages": ["English", "Arabic", "Chinese (Mandarin and Cantonese)", "Hindi", "Korean", "Punjabi", "Tamil", "Vietnamese"],
+      "supportedLanguages": ["English", "Arabic", "Chinese", "Hindi", "Korean", "Punjabi", "Tamil", "Vietnamese"],
       "operationHours": {
         "sales": "Mon-Fri: 8am–9pm, Sat: 9am–7pm, Sun: 9am–6pm",
         "customerService": "Mon-Fri: 8am–8pm, Sat: 9am–5pm",
@@ -240,7 +240,7 @@
     {
       "id": "abb",
       "name": "Aussie Broadband",
-      "logo": "/assets/aussie-logo.png",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Aussie_Broadband_Logo.png",
       "googleReviews": {
         "score": 4.5,
         "count": 9006
@@ -319,7 +319,7 @@
     {
       "id": "superloop",
       "name": "Superloop",
-      "logo": "/assets/superloop-logo.png",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/8/83/Superloop_logo.svg",
       "googleReviews": {
         "score": 4.5,
         "count": 1900
@@ -398,12 +398,12 @@
     {
       "id": "occom",
       "name": "Occom",
-      "logo": "/assets/occom-logo.png",
+      "logo": "https://www.occom.com.au/images/occom-logo-blue.png",
       "googleReviews": {
         "score": 4.5,
         "count": 780
       },
-      "supportedLanguages": ["English", "Chinese (Mandarin and Cantonese)", "Hindi/Punjabi", "Malay", "Korean", "Vietnamese"],
+      "supportedLanguages": ["English", "Chinese", "Hindi/Punjabi", "Malay", "Korean", "Vietnamese"],
       "operationHours": {
         "sales": "Daily 8am–10pm",
         "customerService": "Daily 8am–10pm",
