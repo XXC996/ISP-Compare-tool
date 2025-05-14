@@ -293,15 +293,28 @@
 
 .provider-info {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.8rem;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.provider-logo-image {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  padding: 4px;
+}
+
+.provider-details {
+  flex: 1;
 }
 
 .provider-name {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #333333;
-  margin-bottom: 0;
+  margin-bottom: 0.3rem;
   font-weight: 700;
 }
 
@@ -661,4 +674,38 @@
   .recommendations-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Support & Languages Section */
+.plan-details .detail-row:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.detail-row .detail-label {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: #777;
+  letter-spacing: 0.5px;
+}
+
+.detail-row.languages-row .detail-value,
+.detail-row.support-row .detail-value {
+  font-size: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+.language-tag {
+  background-color: #f0f4f8;
+  color: #555;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.hours-display {
+  color: #666;
+  font-size: 0.85rem;
 } 

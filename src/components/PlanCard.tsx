@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ISPPlan } from '../types';
+import { faClock, faLanguage } from '@fortawesome/free-solid-svg-icons';
 // import { 
 //   faStar, faStarHalfAlt, faWifi, faDollarSign, 
 //   faRouter, faCalculator, faHeadset, faLanguage 
@@ -44,6 +45,21 @@ const PlanCard: React.FC<PlanCardProps> = ({ plan }) => {
   const getContractText = (months: number): string => {
     if (months === 0) return t('planCard.noContract', 'No Contract');
     return t('planCard.monthContract', '{{months}} Months', { months });
+  };
+
+  // Format languages as individual tags
+  const renderLanguages = (languagesString: string) => {
+    if (!languagesString) return null;
+    
+    const languageList = languagesString.split(', ').map(lang => lang.trim());
+    
+    return (
+      <div className="languages-list">
+        {languageList.map((lang, index) => (
+          <span key={index} className="language-tag">{lang}</span>
+        ))}
+      </div>
+    );
   };
 
   return (
@@ -96,14 +112,16 @@ const PlanCard: React.FC<PlanCardProps> = ({ plan }) => {
           <div className="support-info">
             {plan.support && (
               <div>
-                {/* <FontAwesomeIcon icon={faHeadset} /> {plan.support} */}
-                {plan.support}
+                <FontAwesomeIcon icon={faClock} size="sm" />
+                <span className="support-label">HOURS:</span>
+                <span className="hours-display">{plan.support}</span>
               </div>
             )}
             {plan.languages && (
               <div>
-                {/* <FontAwesomeIcon icon={faLanguage} /> {plan.languages} */}
-                {plan.languages}
+                <FontAwesomeIcon icon={faLanguage} size="sm" />
+                <span className="support-label">LANGUAGES:</span>
+                {renderLanguages(plan.languages)}
               </div>
             )}
           </div>

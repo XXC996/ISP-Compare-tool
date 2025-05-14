@@ -4,6 +4,14 @@ import '../styles/ComparePlanSection.css';
 import ispPlans from '../data/ispPlans.json';
 import ispDataRaw from '../data/ispData.json';
 
+// Import logo images
+import superloopLogo from '../assets/company_icon/Superloop.jpeg';
+import aussieBroadbandLogo from '../assets/company_icon/AussieBroadband.jpeg';
+import occomLogo from '../assets/company_icon/occom.jpeg';
+import tpgLogo from '../assets/company_icon/TPG.png';
+import optusLogo from '../assets/company_icon/Optus.png';
+import telstraLogo from '../assets/company_icon/Telstra.jpeg';
+
 // Plan improvement options
 type ImprovementFocus = 'price' | 'speed' | 'reliability' | 'support';
 
@@ -21,6 +29,7 @@ interface PlanData {
   setupFee?: number;
   dataAllowance?: string;
   modemIncluded?: boolean;
+  logoSrc?: string;
 }
 
 // Define speed tier options interface
@@ -355,6 +364,26 @@ const ComparePlanSection: React.FC = () => {
     // Parse speed value
     const speedValue = parseInt(currentSpeed, 10);
 
+    // Get provider logo based on name
+    const getProviderLogo = (providerName: string): string => {
+      switch(providerName.toLowerCase()) {
+        case 'superloop':
+          return superloopLogo;
+        case 'aussie broadband':
+          return aussieBroadbandLogo;
+        case 'occom':
+          return occomLogo;
+        case 'tpg':
+          return tpgLogo;
+        case 'optus':
+          return optusLogo;
+        case 'telstra':
+          return telstraLogo;
+        default:
+          return '';
+      }
+    };
+
     // Enhanced mock data for recommendations with more detailed information
     const allRecommendations: PlanData[] = [
       {
@@ -369,7 +398,8 @@ const ComparePlanSection: React.FC = () => {
         typicalEveningSpeed: '93 Mbps',
         setupFee: 0,
         dataAllowance: 'Unlimited',
-        modemIncluded: false
+        modemIncluded: false,
+        logoSrc: superloopLogo
       },
       {
         provider: 'Aussie Broadband',
@@ -383,7 +413,8 @@ const ComparePlanSection: React.FC = () => {
         typicalEveningSpeed: '95 Mbps',
         setupFee: 0,
         dataAllowance: 'Unlimited',
-        modemIncluded: false
+        modemIncluded: false,
+        logoSrc: aussieBroadbandLogo
       },
       {
         provider: 'Occom',
@@ -397,7 +428,8 @@ const ComparePlanSection: React.FC = () => {
         typicalEveningSpeed: '91 Mbps',
         setupFee: 0,
         dataAllowance: 'Unlimited',
-        modemIncluded: true
+        modemIncluded: true,
+        logoSrc: occomLogo
       },
       {
         provider: 'TPG',
@@ -411,7 +443,8 @@ const ComparePlanSection: React.FC = () => {
         typicalEveningSpeed: '46 Mbps',
         setupFee: 0,
         dataAllowance: 'Unlimited',
-        modemIncluded: true
+        modemIncluded: true,
+        logoSrc: tpgLogo
       },
       {
         provider: 'Optus',
@@ -425,7 +458,8 @@ const ComparePlanSection: React.FC = () => {
         typicalEveningSpeed: '45 Mbps',
         setupFee: 0,
         dataAllowance: 'Unlimited',
-        modemIncluded: true
+        modemIncluded: true,
+        logoSrc: optusLogo
       }
     ];
 
@@ -692,9 +726,18 @@ const ComparePlanSection: React.FC = () => {
                   
                   <div className="plan-header">
                     <div className="provider-info">
-                      <h5 className="provider-name">{plan.provider}</h5>
-                      <div className="provider-rating">
-                        {renderStars(plan.rating)}
+                      {plan.logoSrc && (
+                        <img 
+                          src={plan.logoSrc} 
+                          alt={plan.provider} 
+                          className="provider-logo-image" 
+                        />
+                      )}
+                      <div className="provider-details">
+                        <h5 className="provider-name">{plan.provider}</h5>
+                        <div className="provider-rating">
+                          {renderStars(plan.rating)}
+                        </div>
                       </div>
                     </div>
                     <p className="plan-name">{plan.name}</p>

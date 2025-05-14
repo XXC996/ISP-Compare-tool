@@ -311,4 +311,61 @@
 .channel-icon {
   margin-right: 5px;
   vertical-align: middle;
+}
+
+/* Support Info Section */
+.support-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  background-color: rgba(245, 247, 250, 0.5);
+  padding: 0.6rem;
+  border-radius: 6px;
+}
+
+.support-info div {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.support-info span {
+  font-weight: 500;
+  color: #555;
+}
+
+.support-label {
+  font-weight: 600;
+  color: #666;
+  margin-right: 0.3rem;
+}
+
+/* Languages Display */
+.languages-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+}
+
+.language-tag {
+  background-color: #f0f4f8;
+  color: #555;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+/* Hours Display */
+.hours-display {
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.hours-prefix {
+  color: #888;
+  margin-right: 0.2rem;
 } 
