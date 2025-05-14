@@ -95,18 +95,18 @@ const Newsletter: React.FC = () => {
   return (
     <section className="newsletter">
       <div className="container">
-        <h3>Stay Updated</h3>
-        <p>Subscribe to receive notifications about price drops, new plans, and exclusive offers.</p>
+        <h3>{t('newsletter.title', 'Stay Updated')}</h3>
+        <p>{t('newsletter.description', 'Subscribe to receive notifications about price drops, new plans, and exclusive offers.')}</p>
         
         {isSubmitted ? (
           <div className="success-message">
-            <p>Thank you, {formData.firstName}! You're now subscribed to our updates.</p>
+            <p>{t('newsletter.success', 'Thank you, {{name}}! You\'re now subscribed to our updates.', { name: formData.firstName })}</p>
           </div>
         ) : (
           <form className="newsletter-form" onSubmit={handleSubmit}>
             <div className="form-row">
               <div className="form-group">
-                <label htmlFor="firstName">First Name</label>
+                <label htmlFor="firstName">{t('newsletter.firstName', 'First Name')}</label>
                 <input 
                   type="text" 
                   id="firstName"
@@ -118,7 +118,7 @@ const Newsletter: React.FC = () => {
               </div>
               
               <div className="form-group">
-                <label htmlFor="lastName">Last Name</label>
+                <label htmlFor="lastName">{t('newsletter.lastName', 'Last Name')}</label>
                 <input 
                   type="text" 
                   id="lastName"
@@ -132,7 +132,7 @@ const Newsletter: React.FC = () => {
             
             <div className="form-row">
               <div className="form-group">
-                <label htmlFor="email">Email Address</label>
+                <label htmlFor="email">{t('newsletter.email', 'Email Address')}</label>
                 <input 
                   type="email" 
                   id="email"
@@ -144,7 +144,7 @@ const Newsletter: React.FC = () => {
               </div>
               
               <div className="form-group">
-                <label htmlFor="phone">Phone Number (Optional)</label>
+                <label htmlFor="phone">{t('newsletter.phone', 'Phone Number (Optional)')}</label>
                 <input 
                   type="tel" 
                   id="phone"
@@ -158,11 +158,11 @@ const Newsletter: React.FC = () => {
             {error && <div className="error-message">{error}</div>}
             
             <div className="privacy-notice">
-              <p>By submitting this form, you agree to our privacy policy and consent to receive communications from us.</p>
+              <p>{t('newsletter.privacyNotice', 'By submitting this form, you agree to our privacy policy and consent to receive communications from us.')}</p>
             </div>
             
             <button type="submit" className="submit-button">
-              Subscribe
+              {t('newsletter.subscribe', 'Subscribe')}
             </button>
           </form>
         )}

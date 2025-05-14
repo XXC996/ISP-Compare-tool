@@ -112,7 +112,15 @@
     "under75": "Under $75",
     "75to100": "$75 - $100",
     "100to125": "$100 - $125",
-    "above125": "Above $125"
+    "above125": "Above $125",
+    "findYourPlan": "Find Your Perfect Plan",
+    "networkTypeGroup": "Network Types",
+    "speedPriceGroup": "Speed & Price",
+    "supportGroup": "Support & Features",
+    "sortOptions": "Sort Results",
+    "resetAll": "Reset All",
+    "activeFilters": "Active Filters:",
+    "noActiveFilters": "No active filters"
   },
   "speedSelector": {
     "title": "Internet Speed Matcher",

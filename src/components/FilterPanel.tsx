@@ -111,7 +111,7 @@ const FilterPanel: React.FC<FilterPanelProps> = ({ onFilterChange }) => {
     <section className="filter-panel">
       <div className="container">
         <div className="filter-panel-header">
-          <h3>{t('filters.title', 'Find Your Perfect Plan')}</h3>
+          <h3>{t('filters.findYourPlan', 'Find Your Perfect Plan')}</h3>
           <div className="filter-actions">
             <button className="reset-filters" onClick={resetFilters}>
               {t('filters.resetAll', 'Reset All')}
