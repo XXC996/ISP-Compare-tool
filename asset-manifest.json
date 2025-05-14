@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/ISP-Compare-tool/static/css/main.14095578.css",
+    "main.css": "/ISP-Compare-tool/static/css/main.875a7cd1.css",
     "main.js": "/ISP-Compare-tool/static/js/main.2a16fb82.js",
     "index.html": "/ISP-Compare-tool/index.html",
     "static/media/getFetch.cjs": "/ISP-Compare-tool/static/media/getFetch.7a7a1c81840c96d5a3ea.cjs",
-    "main.14095578.css.map": "/ISP-Compare-tool/static/css/main.14095578.css.map",
+    "main.875a7cd1.css.map": "/ISP-Compare-tool/static/css/main.875a7cd1.css.map",
     "main.2a16fb82.js.map": "/ISP-Compare-tool/static/js/main.2a16fb82.js.map"
   },
   "entrypoints": [
-    "static/css/main.14095578.css",
+    "static/css/main.875a7cd1.css",
     "static/js/main.2a16fb82.js"
   ]
 }
