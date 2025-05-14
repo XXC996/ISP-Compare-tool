@@ -11,39 +11,39 @@ const Features: React.FC = () => {
     {
       id: 1,
       icon: faRobot,
-      title: "AI-Powered Recommendations",
-      description: "Get personalized recommendations based on your usage patterns and location"
+      titleKey: 'features.aiRecommendations',
+      descriptionKey: 'features.aiDescription'
     },
     {
       id: 2,
       icon: faLanguage,
-      title: "Multi-language Support",
-      description: "Compare plans in your preferred language with our translation service"
+      titleKey: 'features.multilanguage',
+      descriptionKey: 'features.multilanguageDescription'
     },
     {
       id: 3,
       icon: faSearchDollar,
-      title: "Real-time Price Updates",
-      description: "We regularly update prices and promotions from all major providers"
+      titleKey: 'features.priceUpdates',
+      descriptionKey: 'features.priceUpdatesDescription'
     },
     {
       id: 4,
       icon: faStar,
-      title: "Verified Reviews",
-      description: "Read real customer reviews from multiple sources before making a decision"
+      titleKey: 'features.reviews',
+      descriptionKey: 'features.reviewsDescription'
     }
   ];
 
   return (
-    <section className="features">
+    <section className="features" id="features-section">
       <div className="container">
-        <h3>Why Choose Our Comparison Service?</h3>
+        <h3>{t('features.title')}</h3>
         <div className="features-grid">
           {features.map(feature => (
             <div className="feature-box" key={feature.id}>
               <FontAwesomeIcon icon={feature.icon} />
-              <h4>{feature.title}</h4>
-              <p>{feature.description}</p>
+              <h4>{t(feature.titleKey)}</h4>
+              <p>{t(feature.descriptionKey)}</p>
             </div>
           ))}
         </div>

@@ -1,4 +1,7 @@
 {
+  "app": {
+    "title": "网络服务比较工具"
+  },
   "header": {
     "home": "首页",
     "speedMatcher": "速度匹配器",
