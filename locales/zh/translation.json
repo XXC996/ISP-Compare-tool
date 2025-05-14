@@ -112,7 +112,15 @@
     "under75": "低于$75",
     "75to100": "$75 - $100",
     "100to125": "$100 - $125",
-    "above125": "高于$125"
+    "above125": "高于$125",
+    "findYourPlan": "找到您理想的套餐",
+    "networkTypeGroup": "网络类型",
+    "speedPriceGroup": "速度和价格",
+    "supportGroup": "支持和功能",
+    "sortOptions": "排序选项",
+    "resetAll": "重置全部",
+    "activeFilters": "已激活的筛选条件：",
+    "noActiveFilters": "没有激活的筛选条件"
   },
   "speedSelector": {
     "title": "网速匹配器",
