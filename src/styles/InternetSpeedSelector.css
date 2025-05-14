@@ -1127,9 +1127,13 @@
 /* Postcode Availability Checker */
 .postcode-checker-section {
   padding: 3rem 0;
-  background-color: var(--card-background);
+  background-color: var(--white);
   border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
+}
+
+.postcode-checker-section .container {
+  max-width: 850px;
+  margin: 0 auto;
 }
 
 .postcode-checker-section .section-title {
@@ -1150,11 +1154,11 @@
 .postcode-form {
   max-width: 500px;
   margin: 0 auto;
-  padding: 2rem;
   background-color: white;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   border: 1px solid var(--border-color);
+  padding: 2rem;
 }
 
 .postcode-input {

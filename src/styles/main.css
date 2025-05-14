@@ -128,7 +128,9 @@ a:hover {
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 1.5rem;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .main-navigation ul li {
@@ -138,10 +140,12 @@ a:hover {
 .main-navigation ul li a {
     color: var(--text-color);
     font-weight: 500;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0.8rem;
     position: relative;
     font-size: 1rem;
     transition: all 0.2s ease;
+    display: block;
+    text-align: center;
 }
 
 .main-navigation ul li a:hover {

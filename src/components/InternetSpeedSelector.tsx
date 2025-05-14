@@ -8,7 +8,7 @@ const EMAIL_SERVICE_ID = 'service_dmfhkaf'; // 已更新为提供的Service ID
 const EMAIL_TEMPLATE_ID = 'template_deksswe'; // 已更新为新提供的模板ID
 const EMAIL_PUBLIC_KEY = 'suKHT-g0o2Dgos4zd'; // 已更新为提供的Public Key
 
-// Remove export from here
+// Postcode component defined as a separate component within the file
 function PostcodeAvailabilityChecker() {
   const { t } = useTranslation();
   const [postcode, setPostcode] = useState('');
@@ -568,166 +568,168 @@ export default function InternetSpeedSelector() {
   };
 
   return (
-    <section className="speed-selector" id="speed-selector">
-      <div className="container">
-        <h3 className="section-title">{t('speedSelector.title', 'Internet Speed Matcher')}</h3>
-        <p className="section-description">
-          {t('speedSelector.description', 'Tell us about your internet usage, and we\'ll recommend the perfect NBN speed tier for your household.')}
-        </p>
-        
-        {!resultsVisible ? (
-          <div className="wizard-container">
-            <div className="wizard-progress">
-              <div className="progress-bar">
-                <div 
-                  className="progress-fill" 
-                  style={{ width: `${(currentStep / 3) * 100}%` }}
-                ></div>
-              </div>
-              <div className="progress-steps">
-                <div className={`progress-step ${currentStep >= 1 ? 'active' : ''}`}>
-                  <div className="step-indicator">1</div>
-                  <span>{t('speedSelector.stepHousehold', 'Household')}</span>
+    <>
+      <section className="speed-selector" id="speed-selector">
+        <div className="container">
+          <h3 className="section-title">{t('speedSelector.title', 'Internet Speed Matcher')}</h3>
+          <p className="section-description">
+            {t('speedSelector.description', 'Tell us about your internet usage, and we\'ll recommend the perfect NBN speed tier for your household.')}
+          </p>
+          
+          {!resultsVisible ? (
+            <div className="wizard-container">
+              <div className="wizard-progress">
+                <div className="progress-bar">
+                  <div 
+                    className="progress-fill" 
+                    style={{ width: `${(currentStep / 3) * 100}%` }}
+                  ></div>
                 </div>
-                <div className={`progress-step ${currentStep >= 2 ? 'active' : ''}`}>
-                  <div className="step-indicator">2</div>
-                  <span>{t('speedSelector.stepPriority', 'Priority')}</span>
-                </div>
-                <div className={`progress-step ${currentStep >= 3 ? 'active' : ''}`}>
-                  <div className="step-indicator">3</div>
-                  <span>{t('speedSelector.stepActivities', 'Activities')}</span>
-                </div>
-              </div>
-            </div>
-            
-            {/* Current Step Content */}
-            <div className="wizard-step-content">
-              {renderStepContent()}
-            </div>
-            
-            {/* Navigation Buttons */}
-            <div className="wizard-navigation">
-              {getBackButtonText() && (
-                <button 
-                  onClick={goToPreviousStep}
-                  className="back-button wizard-back"
-                >
-                  {getBackButtonText()}
-                </button>
-              )}
-              
-              <button 
-                onClick={goToNextStep}
-                disabled={!canProceedToNextStep()}
-                className={`next-button wizard-next ${!canProceedToNextStep() ? 'disabled' : ''}`}
-              >
-                {getNextButtonText()}
-              </button>
-            </div>
-          </div>
-        ) : (
-          <div className="results-container">
-            <h3 className="results-title">
-              {t('speedSelector.resultsTitle', 'Your Recommended Internet Speed')}
-            </h3>
-            
-            {getRelevantSpeedInfo() && (
-              <>
-                <div className="recommendation">
-                  <span className="speed-name">
-                    {getRelevantSpeedInfo()?.details.name}
-                  </span>
-                  <span className="nbn-type">
-                    {getNBNType(getRelevantSpeedInfo()?.recommendation || '50Mbps')}
-                  </span>
-                </div>
-                
-                <div className="activities-details">
-                  {selectedActivities.map(activityId => {
-                    const activity = activities.find(a => a.id === activityId);
-                    if (!activity || !getRelevantSpeedInfo()) return null;
-                    return (
-                      <div key={activityId} className="activity-detail">
-                        <span className="activity-icon">{activity.icon}</span>
-                        <div className="activity-info">
-                          <p className="activity-name">{activity.name}</p>
-                          <p className="activity-performance">
-                            {getRelevantSpeedInfo()?.details[activityId]}
-                          </p>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-                
-                <div className="price-comparison">
-                  <p className="comparison-title">{t('speedSelector.priceComparison', 'Provider Price Comparison')}</p>
-                  <div className="providers">
-                    <div className="provider">
-                      <p className="provider-name">Superloop</p>
-                      <p className="provider-price">
-                        ${getProviderPrices(getRelevantSpeedInfo()?.recommendation || '50Mbps').superloop}/mo
-                      </p>
-                    </div>
-                    <div className="provider">
-                      <p className="provider-name">Occom</p>
-                      <p className="provider-price">
-                        ${getProviderPrices(getRelevantSpeedInfo()?.recommendation || '50Mbps').occom}/mo
-                      </p>
-                    </div>
+                <div className="progress-steps">
+                  <div className={`progress-step ${currentStep >= 1 ? 'active' : ''}`}>
+                    <div className="step-indicator">1</div>
+                    <span>{t('speedSelector.stepHousehold', 'Household')}</span>
+                  </div>
+                  <div className={`progress-step ${currentStep >= 2 ? 'active' : ''}`}>
+                    <div className="step-indicator">2</div>
+                    <span>{t('speedSelector.stepPriority', 'Priority')}</span>
+                  </div>
+                  <div className={`progress-step ${currentStep >= 3 ? 'active' : ''}`}>
+                    <div className="step-indicator">3</div>
+                    <span>{t('speedSelector.stepActivities', 'Activities')}</span>
                   </div>
                 </div>
-                
-                <div className="email-section">
-                  <h4>{t('speedSelector.getPersonalizedEmail', 'Get Personalized Recommendations')}</h4>
-                  <p>{t('speedSelector.emailDescription', 'Enter your email to receive personalized ISP recommendations based on your needs.')}</p>
-                  
-                  <form ref={formRef} onSubmit={handleEmailSubmit} className="email-form">
-                    <div className="email-input-container">
-                      <input
-                        type="email"
-                        name="user_email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        placeholder={t('speedSelector.emailPlaceholder', 'Your email address')}
-                        className={emailError ? 'error' : ''}
-                        disabled={sendingEmail || emailSuccess}
-                      />
-                      <button 
-                        type="submit" 
-                        className="email-submit-button"
-                        disabled={sendingEmail || emailSuccess}
-                      >
-                        {sendingEmail ? t('speedSelector.sending', 'Sending...') : t('speedSelector.sendButton', 'Send')}
-                      </button>
-                    </div>
-                    
-                    {emailError && <p className="email-error">{emailError}</p>}
-                    {emailSuccess && (
-                      <p className="email-success">
-                        {t('speedSelector.emailSuccess', 'Thanks! We\'ve sent your personalized recommendations to your email.')}
-                        <span className="check-spam-note"> Please check your spam folder if you don't see it in your inbox.</span>
-                      </p>
-                    )}
-                  </form>
-                </div>
-                
-                <div className="results-action-buttons">
-                  <button
-                    onClick={restartWizard}
-                    className="back-button"
+              </div>
+              
+              {/* Current Step Content */}
+              <div className="wizard-step-content">
+                {renderStepContent()}
+              </div>
+              
+              {/* Navigation Buttons */}
+              <div className="wizard-navigation">
+                {getBackButtonText() && (
+                  <button 
+                    onClick={goToPreviousStep}
+                    className="back-button wizard-back"
                   >
-                    {t('speedSelector.modifySelections', 'Modify My Selections')}
+                    {getBackButtonText()}
                   </button>
-                </div>
-              </>
-            )}
-          </div>
-        )}
-      </div>
+                )}
+                
+                <button 
+                  onClick={goToNextStep}
+                  disabled={!canProceedToNextStep()}
+                  className={`next-button wizard-next ${!canProceedToNextStep() ? 'disabled' : ''}`}
+                >
+                  {getNextButtonText()}
+                </button>
+              </div>
+            </div>
+          ) : (
+            <div className="results-container">
+              <h3 className="results-title">
+                {t('speedSelector.resultsTitle', 'Your Recommended Internet Speed')}
+              </h3>
+              
+              {getRelevantSpeedInfo() && (
+                <>
+                  <div className="recommendation">
+                    <span className="speed-name">
+                      {getRelevantSpeedInfo()?.details.name}
+                    </span>
+                    <span className="nbn-type">
+                      {getNBNType(getRelevantSpeedInfo()?.recommendation || '50Mbps')}
+                    </span>
+                  </div>
+                  
+                  <div className="activities-details">
+                    {selectedActivities.map(activityId => {
+                      const activity = activities.find(a => a.id === activityId);
+                      if (!activity || !getRelevantSpeedInfo()) return null;
+                      return (
+                        <div key={activityId} className="activity-detail">
+                          <span className="activity-icon">{activity.icon}</span>
+                          <div className="activity-info">
+                            <p className="activity-name">{activity.name}</p>
+                            <p className="activity-performance">
+                              {getRelevantSpeedInfo()?.details[activityId]}
+                            </p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  
+                  <div className="price-comparison">
+                    <p className="comparison-title">{t('speedSelector.priceComparison', 'Provider Price Comparison')}</p>
+                    <div className="providers">
+                      <div className="provider">
+                        <p className="provider-name">Superloop</p>
+                        <p className="provider-price">
+                          ${getProviderPrices(getRelevantSpeedInfo()?.recommendation || '50Mbps').superloop}/mo
+                        </p>
+                      </div>
+                      <div className="provider">
+                        <p className="provider-name">Occom</p>
+                        <p className="provider-price">
+                          ${getProviderPrices(getRelevantSpeedInfo()?.recommendation || '50Mbps').occom}/mo
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="email-section">
+                    <h4>{t('speedSelector.getPersonalizedEmail', 'Get Personalized Recommendations')}</h4>
+                    <p>{t('speedSelector.emailDescription', 'Enter your email to receive personalized ISP recommendations based on your needs.')}</p>
+                    
+                    <form ref={formRef} onSubmit={handleEmailSubmit} className="email-form">
+                      <div className="email-input-container">
+                        <input
+                          type="email"
+                          name="user_email"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          placeholder={t('speedSelector.emailPlaceholder', 'Your email address')}
+                          className={emailError ? 'error' : ''}
+                          disabled={sendingEmail || emailSuccess}
+                        />
+                        <button 
+                          type="submit" 
+                          className="email-submit-button"
+                          disabled={sendingEmail || emailSuccess}
+                        >
+                          {sendingEmail ? t('speedSelector.sending', 'Sending...') : t('speedSelector.sendButton', 'Send')}
+                        </button>
+                      </div>
+                      
+                      {emailError && <p className="email-error">{emailError}</p>}
+                      {emailSuccess && (
+                        <p className="email-success">
+                          {t('speedSelector.emailSuccess', 'Thanks! We\'ve sent your personalized recommendations to your email.')}
+                          <span className="check-spam-note"> Please check your spam folder if you don't see it in your inbox.</span>
+                        </p>
+                      )}
+                    </form>
+                  </div>
+                  
+                  <div className="results-action-buttons">
+                    <button
+                      onClick={restartWizard}
+                      className="back-button"
+                    >
+                      {t('speedSelector.modifySelections', 'Modify My Selections')}
+                    </button>
+                  </div>
+                </>
+              )}
+            </div>
+          )}
+        </div>
+      </section>
       
-      {/* Include PostcodeAvailabilityChecker directly here */}
+      {/* Add PostcodeAvailabilityChecker as a separate section */}
       <PostcodeAvailabilityChecker />
-    </section>
+    </>
   );
 } 
