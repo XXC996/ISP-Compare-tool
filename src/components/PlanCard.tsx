@@ -121,7 +121,7 @@ const PlanCard: React.FC<PlanCardProps> = ({ plan }) => {
               <div>
                 <FontAwesomeIcon icon={faLanguage} size="sm" />
                 <span className="support-label">LANGUAGES:</span>
-                {renderLanguages(plan.languages)}
+                <span>{plan.languages}</span>
               </div>
             )}
           </div>

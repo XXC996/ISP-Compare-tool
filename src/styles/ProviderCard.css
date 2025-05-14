@@ -318,8 +318,8 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  font-size: 0.8rem;
-  color: var(--text-muted);
+  font-size: 1rem;
+  color: #000000;
   margin-top: 0.5rem;
   background-color: rgba(245, 247, 250, 0.5);
   padding: 0.6rem;
@@ -333,13 +333,13 @@
 }
 
 .support-info span {
-  font-weight: 500;
-  color: #555;
+  font-weight: normal;
+  color: #000000;
 }
 
 .support-label {
-  font-weight: 600;
-  color: #666;
+  font-weight: normal;
+  color: #000000;
   margin-right: 0.3rem;
 }
 
@@ -348,24 +348,26 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.3rem;
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 
 .language-tag {
-  background-color: #f0f4f8;
-  color: #555;
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
+  background-color: transparent;
+  color: #000000;
+  padding: 0;
+  border-radius: 0;
   white-space: nowrap;
+  font-weight: normal;
 }
 
 /* Hours Display */
 .hours-display {
-  color: #666;
-  font-size: 0.8rem;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: normal;
 }
 
 .hours-prefix {
-  color: #888;
+  color: #000000;
   margin-right: 0.2rem;
 } 
