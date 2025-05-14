@@ -1,0 +1,217 @@
+/* MainComparison Layout Styles */
+.main-comparison {
+  padding: 3rem 0;
+  background-color: var(--background-light);
+}
+
+.comparison-intro {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.comparison-intro h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.comparison-intro p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.comparison-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* Filter Sidebar Styles */
+.filter-sidebar {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.results-summary {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  text-align: center;
+  box-shadow: var(--box-shadow);
+}
+
+.results-summary p {
+  margin: 0;
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.filter-help-card {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--box-shadow);
+}
+
+.filter-help-card h4 {
+  color: #000000;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.filter-help-card p {
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.help-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--accent-color-2);
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.help-button:hover {
+  background-color: var(--accent-color-1);
+}
+
+/* Plans Container Styles */
+.plans-container {
+  min-height: 400px;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  grid-auto-rows: auto;
+  align-items: flex-start;
+}
+
+/* Apply styles to child elements in the grid */
+.plans-grid > div {
+  height: 100%;
+  align-self: flex-start;
+}
+
+/* Loading State */
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--light-gray);
+  border-top: 4px solid var(--accent-color-1);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-state p {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* No Results Message */
+.no-results-message {
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  border: 1px dashed var(--border-color);
+  box-shadow: var(--box-shadow);
+}
+
+.no-results-message h3 {
+  color: #000000;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.no-results-message p {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.reset-filters-button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent-color-1);
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.reset-filters-button:hover {
+  background-color: var(--accent-color-2);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .comparison-layout {
+    grid-template-columns: 280px 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .plans-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .comparison-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .filter-sidebar {
+    position: relative;
+    top: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .comparison-intro h2 {
+    font-size: 1.8rem;
+  }
+  
+  .comparison-intro p {
+    font-size: 1rem;
+  }
+} 

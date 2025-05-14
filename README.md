@@ -11,10 +11,30 @@ Current experimental features:
 - Support language filter
 - Operation hours filter
 
+## Recent Updates
+
+### Data Structure and Component Updates
+- Refactored `Comparison.tsx` to use `ispData.json` as the primary data source
+- Updated type definitions with new `PlanData` interface
+- Removed `networkTypes` and `messaging` options from filters
+- Enhanced language support with actual supported languages
+- Added price tier filtering with customizable ranges
+
+### Price Data Management
+- Added Python script (`update_prices.py`) for automated price updates from Excel files
+- Created documentation in both English and Chinese for price update procedures
+- Implemented safe update process with automatic backups
+- Added support for preserving discount relationships when updating prices
+
+### Internationalization Updates
+- Added comprehensive translations for network types and speed tiers
+- Updated language options to include: English, Chinese, Hindi, Punjabi, Arabic, Korean, Vietnamese, Tamil, and Malay
+- Enhanced translation coverage for support channels and contract types
+
 ## Features
 
 - TypeScript integration for improved type safety and development experience
-- Internationalization (i18n) with support for English and Chinese languages
+- Internationalization (i18n) with support for multiple languages
 - Responsive design with mobile-friendly UI
 - Comparison tool for ISP plans and utilities
 - FAQ section, newsletter signup, and more
@@ -76,6 +96,9 @@ react-isp-comparison/
 │   │   └── zh/            # Chinese translations
 ├── src/
 │   ├── components/        # React components
+│   ├── data/              # JSON data files
+│   │   ├── ispData.json   # ISP provider and plan data
+│   │   └── filterConfig.json # Configuration for filters
 │   ├── styles/            # CSS files
 │   ├── types/             # TypeScript type definitions
 │   │   ├── index.ts       # Common interfaces
@@ -83,5 +106,19 @@ react-isp-comparison/
 │   ├── i18n.ts            # i18n configuration
 │   ├── App.tsx            # Main App component
 │   └── index.tsx          # Entry point
+├── update_prices.py       # Python script for updating prices from Excel
+├── UPDATE_PRICES_README.md   # Documentation for price updates (English)
+├── UPDATE_PRICES_README_CN.md   # Documentation for price updates (Chinese)
 └── package.json           # Dependencies and scripts
-``` 
+```
+
+## Data Update Process
+
+The application uses a structured JSON file for ISP data. To update prices:
+
+1. Use the provided `update_prices.py` script to import prices from an Excel file
+2. The script will automatically create a backup of the original data
+3. Review the changes in the console output
+4. Test the website to ensure all prices display correctly
+
+See `UPDATE_PRICES_README.md` for detailed instructions. 

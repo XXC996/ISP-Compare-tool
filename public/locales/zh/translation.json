@@ -1,10 +1,9 @@
 {
   "header": {
     "home": "首页",
-    "plans": "套餐",
-    "compare": "比较",
-    "about": "关于我们",
-    "contact": "联系方式"
+    "speedMatcher": "速度匹配器",
+    "availability": "服务可用性",
+    "comparePlan": "套餐比较"
   },
   "hero": {
     "title": "找到您理想的网络服务提供商",
@@ -128,10 +127,15 @@
     "switchProvidersAnswer": "可以，但您可能需要支付提前终止费用。我们的比较工具可以帮助您计算更换带来的节省是否超过终止费用。一些新的提供商还提供支付转换费用作为他们的注册优惠。"
   },
   "newsletter": {
-    "title": "保持更新",
-    "subtitle": "直接接收最新的网络服务提供商优惠和新闻",
-    "placeholder": "您的电子邮箱",
-    "button": "订阅"
+    "title": "获取更新",
+    "description": "订阅以接收关于价格下调、新套餐和独家优惠的通知。",
+    "firstName": "名字",
+    "lastName": "姓氏",
+    "email": "电子邮箱",
+    "phone": "电话号码（可选）",
+    "privacyNotice": "提交此表单即表示您同意我们的隐私政策并同意接收我们的通信。",
+    "subscribe": "订阅",
+    "success": "谢谢您，{{name}}！您现已订阅我们的更新。"
   },
   "footer": {
     "rights": "版权所有",

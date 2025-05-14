@@ -154,8 +154,7 @@ const Comparison: React.FC<ComparisonProps> = ({ filters: propFilters }) => {
       features: [
         provider.supportChannels.phone ? "Phone Support" : "",
         provider.supportChannels.liveChat ? "Live Chat" : "",
-        provider.supportChannels.email ? "Email Support" : "",
-        provider.networkTypes.nbn ? "NBN Network" : ""
+        provider.supportChannels.email ? "Email Support" : ""
       ].filter(Boolean),
       rrpPrice: selectedPlan.rrpPrice,
       discountPrice: selectedPlan.discountPrice,

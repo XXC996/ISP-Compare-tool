@@ -1,66 +1,169 @@
 import { useTranslation } from 'react-i18next';
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import '../styles/Newsletter.css';
 
 const Newsletter: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [category, setCategory] = useState('internet');
+  const { t } = useTranslation();
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: ''
+  });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleEmailChange = (e:any) => {
-    setEmail(e.target.value);
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
   };
 
-  const handleCategoryChange = (e: any) => {
-    setCategory(e.target.value);
+  const saveToLocalStorage = (data: any) => {
+    try {
+      // Get existing data from localStorage
+      const existingData = localStorage.getItem('newsletterSubscribers');
+      let subscribers = [];
+      
+      if (existingData) {
+        subscribers = JSON.parse(existingData);
+      }
+      
+      // Add timestamp to the data
+      const subscriberData = {
+        ...data,
+        timestamp: new Date().toISOString()
+      };
+      
+      // Add new subscriber
+      subscribers.push(subscriberData);
+      
+      // Save back to localStorage
+      localStorage.setItem('newsletterSubscribers', JSON.stringify(subscribers));
+      
+      // Log for development purposes
+      console.log('Saved subscriber data:', subscriberData);
+      console.log('All subscribers:', subscribers);
+      
+      return true;
+    } catch (err) {
+      console.error('Error saving to localStorage:', err);
+      return false;
+    }
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setError('');
     
-    if (!email || !email.includes('@')) {
-      alert('Please enter a valid email address');
+    // Validate email
+    if (!formData.email || !formData.email.includes('@')) {
+      setError('Please enter a valid email address');
       return;
     }
     
-    // In a real app, we would send this data to an API
-    console.log('Newsletter subscription:', { email, category });
+    // Validate name fields
+    if (!formData.firstName || !formData.lastName) {
+      setError('Please enter your full name');
+      return;
+    }
     
-    // Show success message
-    setIsSubmitted(true);
+    // Save data
+    const saveSuccess = saveToLocalStorage(formData);
     
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setEmail('');
-      setIsSubmitted(false);
-    }, 3000);
+    if (saveSuccess) {
+      // Show success message
+      setIsSubmitted(true);
+      
+      // Reset form after 5 seconds
+      setTimeout(() => {
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: ''
+        });
+        setIsSubmitted(false);
+      }, 5000);
+    } else {
+      setError('There was an error saving your information. Please try again.');
+    }
   };
 
   return (
     <section className="newsletter">
       <div className="container">
-        <h3>Stay Updated on the Best Deals</h3>
-        <p>Subscribe to our newsletter to receive alerts when prices drop or new plans are released</p>
+        <h3>{t('newsletter.title', 'Stay Updated')}</h3>
+        <p>{t('newsletter.description', 'Subscribe to receive notifications about price drops, new plans, and exclusive offers.')}</p>
         
         {isSubmitted ? (
           <div className="success-message">
-            <p>Thank you for subscribing! We'll send updates to your inbox.</p>
+            <p>{t('newsletter.success', 'Thank you, {name}! You\'re now subscribed to our updates.', { name: formData.firstName })}</p>
           </div>
         ) : (
           <form className="newsletter-form" onSubmit={handleSubmit}>
-            <input 
-              type="email" 
-              placeholder="Your email address" 
-              value={email}
-              onChange={handleEmailChange}
-              required 
-            />
-            <select value={category} onChange={handleCategoryChange}>
-              <option value="internet">Internet Plans</option>
-              <option value="utilities">Utilities</option>
-              <option value="both">Both</option>
-            </select>
-            <button type="submit">Subscribe</button>
+            <div className="form-row">
+              <div className="form-group">
+                <label htmlFor="firstName">{t('newsletter.firstName', 'First Name')}</label>
+                <input 
+                  type="text" 
+                  id="firstName"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleInputChange}
+                  required 
+                />
+              </div>
+              
+              <div className="form-group">
+                <label htmlFor="lastName">{t('newsletter.lastName', 'Last Name')}</label>
+                <input 
+                  type="text" 
+                  id="lastName"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleInputChange}
+                  required 
+                />
+              </div>
+            </div>
+            
+            <div className="form-row">
+              <div className="form-group">
+                <label htmlFor="email">{t('newsletter.email', 'Email Address')}</label>
+                <input 
+                  type="email" 
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required 
+                />
+              </div>
+              
+              <div className="form-group">
+                <label htmlFor="phone">{t('newsletter.phone', 'Phone Number (Optional)')}</label>
+                <input 
+                  type="tel" 
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                />
+              </div>
+            </div>
+            
+            {error && <div className="error-message">{error}</div>}
+            
+            <div className="privacy-notice">
+              <p>{t('newsletter.privacyNotice', 'By submitting this form, you agree to our privacy policy and consent to receive communications from us.')}</p>
+            </div>
+            
+            <button type="submit" className="submit-button">
+              {t('newsletter.subscribe', 'Subscribe')}
+            </button>
           </form>
         )}
       </div>

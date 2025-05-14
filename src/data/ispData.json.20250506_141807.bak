@@ -30,96 +30,54 @@
         "redtrain": false,
         "supa": false
       },
-      "planTypes": ["nbn"],
       "plans": {
         "12M": {
           "rrpPrice": "---",
           "discountPrice": "---",
           "typicalEveningSpeed": "---",
-          "maxSpeed": "---",
-          "downloadUpload": "---",
-          "data": "---",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": false
+          "downloadUpload": "---"
         },
         "25M": {
-          "rrpPrice": 89,
-          "discountPrice": 83.07,
+          "rrpPrice": 75,
+          "discountPrice": 70,
           "typicalEveningSpeed": "25/4",
-          "maxSpeed": "25/4",
-          "downloadUpload": "25/4",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "25/4"
         },
         "50M": {
-          "rrpPrice": 95,
-          "discountPrice": 89.41,
+          "rrpPrice": 85,
+          "discountPrice": 80,
           "typicalEveningSpeed": "50/17",
-          "maxSpeed": "50/20",
-          "downloadUpload": "50/17",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "50/17"
         },
         "100M": {
           "rrpPrice": 110,
           "discountPrice": 100,
           "typicalEveningSpeed": "100/17",
-          "maxSpeed": "100/20",
-          "downloadUpload": "100/17",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "100/17"
         },
         "100/40M": {
           "rrpPrice": "---",
           "discountPrice": "---",
           "typicalEveningSpeed": "---",
-          "maxSpeed": "---",
-          "downloadUpload": "---",
-          "data": "---",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": false
+          "downloadUpload": "---"
         },
         "250M": {
           "rrpPrice": 130,
           "discountPrice": 115,
           "typicalEveningSpeed": "250/22",
-          "maxSpeed": "250/25",
-          "downloadUpload": "250/22",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "250/22"
         },
         "500M": {
           "rrpPrice": "---",
           "discountPrice": "---",
           "typicalEveningSpeed": "---",
-          "maxSpeed": "---",
-          "downloadUpload": "---",
-          "data": "---",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": false
+          "downloadUpload": "---"
         },
         "1000M": {
           "rrpPrice": 150,
           "discountPrice": 130,
           "typicalEveningSpeed": "700/40",
-          "maxSpeed": "1000/50",
-          "downloadUpload": "700/40",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true,
-          "promoPrice": 120
+          "downloadUpload": "700/40"
         }
       }
     },
@@ -153,95 +111,54 @@
         "redtrain": false,
         "supa": false
       },
-      "planTypes": ["nbn"],
       "plans": {
         "12M": {
-          "rrpPrice": 54.99,
-          "discountPrice": 49.49,
+          "rrpPrice": 50,
+          "discountPrice": 45,
           "typicalEveningSpeed": "12/0.8",
-          "maxSpeed": "12/1",
-          "downloadUpload": "12/0.8",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "12/0.8"
         },
         "25M": {
           "rrpPrice": 74.99,
           "discountPrice": 74.99,
           "typicalEveningSpeed": "25/4",
-          "maxSpeed": "25/5",
-          "downloadUpload": "25/4",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "25/4"
         },
         "50M": {
           "rrpPrice": 79.99,
           "discountPrice": 79.99,
           "typicalEveningSpeed": "50/17",
-          "maxSpeed": "50/20",
-          "downloadUpload": "50/17",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "50/17"
         },
         "100M": {
           "rrpPrice": 89.99,
           "discountPrice": 79.99,
           "typicalEveningSpeed": "100/17",
-          "maxSpeed": "100/20",
-          "downloadUpload": "100/17",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "100/17"
         },
         "100/40M": {
           "rrpPrice": "---",
           "discountPrice": "---",
           "typicalEveningSpeed": "---",
-          "maxSpeed": "---",
-          "downloadUpload": "---",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": false
+          "downloadUpload": "---"
         },
         "250M": {
           "rrpPrice": 94.99,
           "discountPrice": 94.99,
           "typicalEveningSpeed": "250/21",
-          "maxSpeed": "250/25",
-          "downloadUpload": "250/21",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "250/21"
         },
         "500M": {
           "rrpPrice": "---",
           "discountPrice": "---",
           "typicalEveningSpeed": "---",
-          "maxSpeed": "---",
-          "downloadUpload": "---",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": false
+          "downloadUpload": "---"
         },
         "1000M": {
-          "rrpPrice": 89.99,
-          "discountPrice": 83.64,
+          "rrpPrice": 85,
+          "discountPrice": 79,
           "typicalEveningSpeed": "800/40",
-          "maxSpeed": "1000/50",
-          "downloadUpload": "800/40",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "800/40"
         }
       }
     },
@@ -282,95 +199,54 @@
         "redtrain": false,
         "supa": false
       },
-      "planTypes": ["nbn"],
       "plans": {
         "12M": {
           "rrpPrice": "---",
           "discountPrice": "---",
           "typicalEveningSpeed": "---",
-          "maxSpeed": "---",
-          "downloadUpload": "---",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": false
+          "downloadUpload": "---"
         },
         "25M": {
           "rrpPrice": 75,
           "discountPrice": 75,
           "typicalEveningSpeed": "25/4",
-          "maxSpeed": "25/5",
-          "downloadUpload": "25/4",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "25/4"
         },
         "50M": {
           "rrpPrice": 89,
           "discountPrice": 89,
           "typicalEveningSpeed": "50/18",
-          "maxSpeed": "50/20",
-          "downloadUpload": "50/18",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "50/18"
         },
         "100M": {
           "rrpPrice": 99,
           "discountPrice": 89,
           "typicalEveningSpeed": "100/18",
-          "maxSpeed": "100/20",
-          "downloadUpload": "100/18",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "100/18"
         },
         "100/40M": {
           "rrpPrice": "---",
           "discountPrice": "---",
           "typicalEveningSpeed": "---",
-          "maxSpeed": "---",
-          "downloadUpload": "---",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": false
+          "downloadUpload": "---"
         },
         "250M": {
           "rrpPrice": 119,
           "discountPrice": 99,
           "typicalEveningSpeed": "245/22",
-          "maxSpeed": "250/25",
-          "downloadUpload": "245/22",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "245/22"
         },
         "500M": {
           "rrpPrice": "---",
           "discountPrice": "---",
           "typicalEveningSpeed": "---",
-          "maxSpeed": "---",
-          "downloadUpload": "---",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": false
+          "downloadUpload": "---"
         },
         "1000M": {
           "rrpPrice": 129,
           "discountPrice": 109,
           "typicalEveningSpeed": "780/40",
-          "maxSpeed": "1000/50",
-          "downloadUpload": "780/40",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "780/40"
         }
       }
     },
@@ -404,95 +280,54 @@
         "redtrain": false,
         "supa": false
       },
-      "planTypes": ["nbn", "opticomm"],
       "plans": {
         "12M": {
           "rrpPrice": 69,
           "discountPrice": 69,
-          "typicalEveningSpeed": "12/1",
-          "maxSpeed": "12/1",
-          "downloadUpload": "12/1",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": false
+          "typicalEveningSpeed": "---",
+          "downloadUpload": "---"
         },
         "25M": {
           "rrpPrice": 79,
           "discountPrice": 79,
           "typicalEveningSpeed": "24/8",
-          "maxSpeed": "25/10",
-          "downloadUpload": "24/8",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "24/8"
         },
         "50M": {
           "rrpPrice": 89,
           "discountPrice": 89,
           "typicalEveningSpeed": "49/16",
-          "maxSpeed": "50/20",
-          "downloadUpload": "49/16",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "49/16"
         },
         "100M": {
           "rrpPrice": 95,
           "discountPrice": 85,
           "typicalEveningSpeed": "99/16",
-          "maxSpeed": "100/20",
-          "downloadUpload": "99/16",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "99/16"
         },
         "100/40M": {
           "rrpPrice": 105,
           "discountPrice": 105,
           "typicalEveningSpeed": "98/34",
-          "maxSpeed": "100/40",
-          "downloadUpload": "98/34",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "98/34"
         },
         "250M": {
           "rrpPrice": 119,
           "discountPrice": 119,
           "typicalEveningSpeed": "248/21",
-          "maxSpeed": "250/25",
-          "downloadUpload": "248/21",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "248/21"
         },
         "500M": {
           "rrpPrice": "---",
           "discountPrice": "---",
           "typicalEveningSpeed": "---",
-          "maxSpeed": "---",
-          "downloadUpload": "---",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": false
+          "downloadUpload": "---"
         },
         "1000M": {
           "rrpPrice": 129,
           "discountPrice": 109,
           "typicalEveningSpeed": "875/42",
-          "maxSpeed": "1000/50",
-          "downloadUpload": "875/42",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "875/42"
         }
       }
     },
@@ -526,95 +361,54 @@
         "redtrain": true,
         "supa": false
       },
-      "planTypes": ["nbn", "opticomm", "redtrain"],
       "plans": {
         "12M": {
           "rrpPrice": "---",
           "discountPrice": "---",
           "typicalEveningSpeed": "---",
-          "maxSpeed": "---",
-          "downloadUpload": "---",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": false
+          "downloadUpload": "---"
         },
         "25M": {
           "rrpPrice": 69,
           "discountPrice": 59,
           "typicalEveningSpeed": "25/5",
-          "maxSpeed": "25/5",
-          "downloadUpload": "25/5",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "25/5"
         },
         "50M": {
           "rrpPrice": 81,
           "discountPrice": 67,
           "typicalEveningSpeed": "50/17",
-          "maxSpeed": "50/20",
-          "downloadUpload": "50/17",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "50/17"
         },
         "100M": {
           "rrpPrice": 89,
           "discountPrice": 75,
           "typicalEveningSpeed": "98/17",
-          "maxSpeed": "100/20",
-          "downloadUpload": "98/17",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "98/17"
         },
         "100/40M": {
           "rrpPrice": 95,
           "discountPrice": 79,
           "typicalEveningSpeed": "98/34",
-          "maxSpeed": "100/40",
-          "downloadUpload": "98/34",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "98/34"
         },
         "250M": {
           "rrpPrice": 99,
           "discountPrice": 85,
           "typicalEveningSpeed": "250/21",
-          "maxSpeed": "250/25",
-          "downloadUpload": "250/21",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "250/21"
         },
         "500M": {
           "rrpPrice": "---",
           "discountPrice": "---",
           "typicalEveningSpeed": "---",
-          "maxSpeed": "---",
-          "downloadUpload": "---",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": false
+          "downloadUpload": "---"
         },
         "1000M": {
           "rrpPrice": 109,
           "discountPrice": 99,
           "typicalEveningSpeed": "811/42",
-          "maxSpeed": "1000/50",
-          "downloadUpload": "811/42",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "811/42"
         }
       }
     },
@@ -653,106 +447,60 @@
         "redtrain": true,
         "supa": true
       },
-      "planTypes": ["nbn", "opticomm", "redtrain", "supa"],
       "plans": {
         "12M": {
-          "rrpPrice": 56.88,
-          "discountPrice": 51.71,
+          "rrpPrice": 55,
+          "discountPrice": 50,
           "typicalEveningSpeed": "12/4",
-          "maxSpeed": "12/5",
-          "downloadUpload": "12/4",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "12/4"
         },
         "25M": {
-          "rrpPrice": 64.88,
-          "discountPrice": 59.47,
+          "rrpPrice": 60,
+          "discountPrice": 55,
           "typicalEveningSpeed": "25/8",
-          "maxSpeed": "25/10",
-          "downloadUpload": "25/8",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "25/8"
         },
         "50M": {
-          "rrpPrice": 69.88,
-          "discountPrice": 64.89,
+          "rrpPrice": 70,
+          "discountPrice": 65,
           "typicalEveningSpeed": "50/17",
-          "maxSpeed": "50/20",
-          "downloadUpload": "50/17",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "50/17"
         },
         "100M": {
-          "rrpPrice": 89.88,
-          "discountPrice": 84.26,
+          "rrpPrice": 80,
+          "discountPrice": 75,
           "typicalEveningSpeed": "100/17",
-          "maxSpeed": "100/20",
-          "downloadUpload": "100/17",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "100/17"
         },
         "100/40M": {
           "rrpPrice": 99.88,
           "discountPrice": 99.88,
           "typicalEveningSpeed": "100/36",
-          "maxSpeed": "100/40",
-          "downloadUpload": "100/36",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "100/36"
         },
         "250M": {
-          "rrpPrice": 129.88,
-          "discountPrice": 122.66,
+          "rrpPrice": 90,
+          "discountPrice": 85,
           "typicalEveningSpeed": "250/20",
-          "maxSpeed": "250/25",
-          "downloadUpload": "250/20",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "250/20"
         },
         "500M": {
           "rrpPrice": "---",
           "discountPrice": "---",
           "typicalEveningSpeed": "500/170",
-          "maxSpeed": "500/200",
-          "downloadUpload": "500/170",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "500/170"
         },
         "1000M": {
-          "rrpPrice": 115,
-          "discountPrice": 109.25,
+          "rrpPrice": 100,
+          "discountPrice": 95,
           "typicalEveningSpeed": "830/43",
-          "maxSpeed": "1000/50",
-          "downloadUpload": "830/43",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "830/43"
         },
         "1000/400M": {
           "rrpPrice": "---",
           "discountPrice": "---",
           "typicalEveningSpeed": "800/336",
-          "maxSpeed": "1000/400",
-          "downloadUpload": "800/336",
-          "data": "Unlimited",
-          "setupFee": 0,
-          "contractLength": 0,
-          "modemIncluded": true
+          "downloadUpload": "800/336"
         }
       }
     }

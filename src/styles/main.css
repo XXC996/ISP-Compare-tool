@@ -1,4 +1,4 @@
-/* Main CSS for ISP & Utilities Comparison Website - Dark Theme with Accent Colors */
+/* Main CSS for ISP & Utilities Comparison Website - Light Theme with Modern Accent Colors */
 @import './comparison.css';
 @import './ISPCalculator.css';
 @import './InternetSpeedSelector.css';
@@ -11,36 +11,37 @@
 }
 
 :root {
-    --primary-color: #1e2a3a;
-    --secondary-color: #14161a;
-    --accent-color-1: #6e5ff6;
-    --accent-color-2: #5a7bd1;
-    --accent-color-3: #e6c36a;
-    --text-color: #f1f2f3;
-    --text-muted: #a2aab8;
-    --light-gray: #2a2f3a;
-    --medium-gray: #333742;
-    --dark-gray: #505665;
-    --success-color: #68c687;
-    --warning-color: #e9c46a;
-    --danger-color: #ef5350;
+    /* 主要色彩 - 明亮现代主题 */
+    --primary-color: #ffffff;
+    --secondary-color: #f8f9fa;
+    --accent-color-1: #4361ee;
+    --accent-color-2: #3a86ff;
+    --accent-color-3: #ff9e00;
+    --text-color: #2b3445;
+    --text-muted: #6c757d;
+    --light-gray: #e9ecef;
+    --medium-gray: #dee2e6;
+    --dark-gray: #adb5bd;
+    --success-color: #4ade80;
+    --warning-color: #ffbe0b;
+    --danger-color: #ef476f;
     --white: #ffffff;
     --black: #000000;
     --border-radius: 8px;
-    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     --transition: all 0.3s ease;
-    --background-dark: #131620;
-    --card-background: #1a1f2b;
-    --border-color: #323845;
-    --gradient-1: linear-gradient(135deg, #323845, #1a1f2b);
-    --gradient-2: linear-gradient(135deg, #434e6c, #282f41);
+    --background-light: #f8fafc;
+    --card-background: #ffffff;
+    --border-color: #e2e8f0;
+    --gradient-1: linear-gradient(135deg, #f8f9fa, #ffffff);
+    --gradient-2: linear-gradient(135deg, #e2e8f0, #f8fafc);
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--background-dark);
+    background-color: var(--background-light);
 }
 
 .container {
@@ -55,23 +56,27 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
     font-weight: 600;
     line-height: 1.2;
-    color: var(--white);
+    color: #000000;
 }
 
 h1 {
     font-size: 2.5rem;
+    color: #000000;
 }
 
 h2 {
     font-size: 2rem;
+    color: #000000;
 }
 
 h3 {
     font-size: 1.75rem;
+    color: #000000;
 }
 
 h4 {
     font-size: 1.5rem;
+    color: #000000;
 }
 
 p {
@@ -90,25 +95,27 @@ a:hover {
 }
 
 /* Header Styles */
-header {
-    background-color: var(--secondary-color);
-    box-shadow: var(--box-shadow);
+.modern-header {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
     z-index: 100;
     border-bottom: 1px solid var(--border-color);
+    padding: 0.5rem 0;
 }
 
-header .container {
+.modern-header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 20px;
+    padding: 0.8rem 20px;
 }
 
 .logo h1 {
-    color: var(--white);
+    color: var(--text-color);
     margin-bottom: 0;
+    font-size: 1.6rem;
 }
 
 .logo span {
@@ -116,31 +123,37 @@ header .container {
     color: var(--accent-color-1);
 }
 
-nav ul {
+.main-navigation ul {
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
 }
 
-nav ul li {
-    margin-left: 1.5rem;
+.main-navigation ul li {
+    margin: 0;
 }
 
-nav ul li a {
+.main-navigation ul li a {
     color: var(--text-color);
     font-weight: 500;
     padding: 0.5rem 0;
     position: relative;
+    font-size: 1rem;
+    transition: all 0.2s ease;
 }
 
-nav ul li a:hover {
+.main-navigation ul li a:hover {
     color: var(--accent-color-1);
 }
 
-nav ul li a.active {
+.main-navigation ul li a.active {
     color: var(--accent-color-1);
+    font-weight: 600;
 }
 
-nav ul li a.active::after {
+.main-navigation ul li a.active::after {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -151,20 +164,78 @@ nav ul li a.active::after {
     border-radius: 2px;
 }
 
-.language-selector select {
-    padding: 0.5rem;
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    font-size: 0.9rem;
+.nav-icon {
+    font-size: 1.2rem;
+}
+
+.nav-text {
+    font-size: 0.95rem;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-action-button {
+    background: none;
+    border: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.search-button {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    background-color: rgba(0, 0, 0, 0.05);
+    width: 36px;
+    height: 36px;
+}
+
+.search-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.signup-button {
+    background-color: var(--accent-color-1);
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.signup-button:hover {
+    background-color: var(--accent-color-2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 992px) {
+    .main-navigation {
+        display: none;
+    }
+    
+    .modern-header .container {
+        justify-content: space-between;
+    }
+    
+    .header-action-button.search-button {
+        display: none;
+    }
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color), #282f41);
-    color: var(--white);
+    background: linear-gradient(135deg, #e3eeff, #f8fafc);
+    color: var(--text-color);
     padding: 4rem 0;
     text-align: center;
     border-bottom: 1px solid var(--border-color);
@@ -173,7 +244,7 @@ nav ul li a.active::after {
 .hero h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: var(--white);
+    color: var(--text-color);
 }
 
 .hero p {
@@ -194,11 +265,11 @@ nav ul li a.active::after {
 .search-box input {
     flex-grow: 1;
     padding: 0.75rem 1rem;
-    border: none;
+    border: 1px solid var(--border-color);
     border-radius: var(--border-radius) 0 0 var(--border-radius);
     font-size: 1rem;
-    background-color: var(--medium-gray);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--text-color);
 }
 
 .search-box button {
@@ -219,9 +290,9 @@ nav ul li a.active::after {
 
 /* Filters Section */
 .filters {
-    background-color: var(--primary-color);
+    background-color: var(--white);
     padding: 1.5rem 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--box-shadow);
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -264,7 +335,7 @@ nav ul li a.active::after {
 .comparison h3 {
     margin-bottom: 2rem;
     text-align: center;
-    color: var(--white);
+    color: #000000;
 }
 
 .comparison-grid {
@@ -338,13 +409,13 @@ nav ul li a.active::after {
     margin-top: 0.5rem;
     margin-bottom: 0.75rem;
     font-size: 1.1rem;
-    color: var(--white);
+    color: #000000;
 }
 
 .plan-details h4 {
     margin-bottom: 0.75rem;
     font-size: 1.25rem;
-    color: var(--white);
+    color: #000000;
 }
 
 .badges {
@@ -484,7 +555,7 @@ nav ul li a.active::after {
 .competitor-tool h3 {
     text-align: center;
     margin-bottom: 1rem;
-    color: var(--white);
+    color: #000000;
 }
 
 .competitor-tool > .container > p {
@@ -493,7 +564,7 @@ nav ul li a.active::after {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    color: var(--text-muted);
+    color: #000000;
 }
 
 .competitor-form {
@@ -556,7 +627,7 @@ nav ul li a.active::after {
 .features h3 {
     text-align: center;
     margin-bottom: 2.5rem;
-    color: var(--white);
+    color: #000000;
 }
 
 .features-grid {
@@ -588,7 +659,7 @@ nav ul li a.active::after {
 
 .feature-box h4 {
     margin-bottom: 1rem;
-    color: var(--white);
+    color: #000000;
 }
 
 .feature-box p {
@@ -606,7 +677,7 @@ nav ul li a.active::after {
 .faq h3 {
     text-align: center;
     margin-bottom: 2.5rem;
-    color: var(--white);
+    color: #000000;
 }
 
 .accordion {
@@ -628,7 +699,7 @@ nav ul li a.active::after {
     background-color: var(--secondary-color);
     cursor: pointer;
     position: relative;
-    color: var(--white);
+    color: #000000;
 }
 
 .accordion-header::after {
@@ -668,14 +739,14 @@ nav ul li a.active::after {
 .newsletter {
     padding: 3rem 0;
     background: linear-gradient(135deg, #3b4762, #1e2a3a);
-    color: var(--white);
+    color: white;
     text-align: center;
     border-top: 1px solid var(--border-color);
 }
 
 .newsletter h3 {
     margin-bottom: 1rem;
-    color: var(--white);
+    color: white;
 }
 
 .newsletter p {
@@ -683,7 +754,7 @@ nav ul li a.active::after {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    color: var(--text-muted);
+    color: white;
 }
 
 .newsletter-form {
@@ -1053,19 +1124,26 @@ address p i {
     top: 20px;
     right: 20px;
     display: flex;
-    align-items: center;
-    background-color: rgba(30, 42, 58, 0.9);
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
     padding: 8px 12px;
-    border-radius: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    border: 1px solid var(--border-color);
+    border: 1px solid #e2e8f0;
     transition: all 0.3s ease;
 }
 
 .language-switcher:hover {
-    background-color: rgba(30, 42, 58, 1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.language-selector-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
 }
 
 .language-switcher svg {
@@ -1074,40 +1152,52 @@ address p i {
     font-size: 16px;
 }
 
+.current-language {
+    margin-right: 8px;
+    font-weight: 500;
+}
+
+.dropdown-arrow {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-arrow.open {
+    transform: rotate(180deg);
+}
+
+.language-dropdown {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 8px;
+}
+
 .language-switcher button {
     background: none;
     border: none;
-    padding: 4px 12px;
-    margin: 0 4px;
+    padding: 6px 10px;
+    margin: 2px 0;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 8px;
     font-size: 14px;
-    color: var(--text-muted);
+    color: #4a5568;
     transition: all 0.2s ease;
-    position: relative;
+    text-align: left;
+    width: 100%;
 }
 
 .language-switcher button:hover {
-    background-color: var(--primary-color);
-    color: var(--white);
+    background-color: #f7fafc;
+    color: var(--accent-color-1);
 }
 
 .language-switcher button.active {
     background-color: var(--accent-color-1);
-    color: var(--white);
-    font-weight: 500;
-}
-
-.language-switcher button.active::after {
-    content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 20px;
-    height: 2px;
-    background-color: var(--white);
-    border-radius: 2px;
+    color: white;
+    font-weight: 600;
 }
 
 /* Search and Filters Enhancements */
@@ -1174,4 +1264,31 @@ address p i {
         text-align: center;
         padding: 0.5rem 1rem;
     }
+}
+
+/* Internet Speed Selector */
+.speed-selector h2,
+.speed-selector h3,
+.speed-selector h4,
+.speed-selector p,
+.speed-selector label {
+    color: #000000;
+}
+
+/* Side-by-Side Comparison */
+.side-comparison h2,
+.side-comparison h3,
+.side-comparison h4,
+.side-comparison p,
+.side-comparison label {
+    color: #000000;
+}
+
+/* Activities Selection */
+.activities-selection h2,
+.activities-selection h3,
+.activities-selection h4,
+.activities-selection p,
+.activities-selection label {
+    color: #000000;
 } 

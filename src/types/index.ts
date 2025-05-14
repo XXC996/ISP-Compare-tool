@@ -1,31 +1,31 @@
 export interface ISPPlan {
   id: string;
   provider: string;
-  name: string;
-  price: number;
+  name?: string;
+  price?: number;
   speed: {
     download: number;
     upload: number;
   };
   data: string; // "Unlimited" or size in GB
   contract: number; // Length in months, 0 for no contract
-  features: string[];
+  features?: string[];
   rating: number;
-  // Extended fields used in PlanCard component
+  // Extended fields used in EnhancedPlanCard component
   logoSrc: string;
   type: string;
-  promoPrice?: string;
+  promoPrice?: number | string;
   typicalSpeed: number;
   setupFee: number;
   modem: string;
-  yearCost: number;
+  yearCost: string | number;
   reviewCount: number;
-  support?: string;
-  languages?: string;
+  support: string;
+  languages: string;
   rrpPrice: number | string;
   discountPrice: number | string;
-  typicalEveningSpeed: string;
-  downloadUpload: string;
+  typicalEveningSpeed?: string;
+  downloadUpload?: string;
 }
 
 export interface IspTable {
@@ -55,16 +55,29 @@ export interface NavItem {
   label: string;
 }
 
+export interface PlanData {
+  rrpPrice: number | string;
+  discountPrice: number | string;
+  typicalEveningSpeed: string;
+  maxSpeed: string;
+  downloadUpload: string;
+  data: string;
+  setupFee: number;
+  contractLength: number;
+  modemIncluded: boolean;
+  promoPrice?: number | string;
+}
+
 export interface ISPPlans {
-  "12M": ISPPlan;
-  "25M": ISPPlan;
-  "50M": ISPPlan;
-  "100M": ISPPlan;
-  "100/40M": ISPPlan;
-  "250M": ISPPlan;
-  "500M": ISPPlan;
-  "1000M": ISPPlan;
-  [key: string]: ISPPlan;
+  "12M": PlanData;
+  "25M": PlanData;
+  "50M": PlanData;
+  "100M": PlanData;
+  "100/40M": PlanData;
+  "250M": PlanData;
+  "500M": PlanData;
+  "1000M": PlanData;
+  [key: string]: PlanData;
 }
 
 export interface OperationHours {
@@ -103,6 +116,7 @@ export interface ISPProvider {
   operationHours: OperationHours;
   supportChannels: SupportChannels;
   networkTypes: NetworkTypes;
+  planTypes: string[];
   plans: ISPPlans;
 }
 
@@ -114,7 +128,6 @@ export interface Filters {
   };
   rating: number;
   language: string[];
-  networkType: string[];
   supportHours: {
     type: string;
     value: string;

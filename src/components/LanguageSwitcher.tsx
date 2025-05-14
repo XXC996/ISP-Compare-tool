@@ -1,52 +1,88 @@
 import { useTranslation } from 'react-i18next';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faGlobe, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+
+interface LanguageOption {
+  code: string;
+  name: string;
+  nativeName: string;
+}
 
 const LanguageSwitcher: React.FC = () => {
   const { i18n } = useTranslation();
+  const [isOpen, setIsOpen] = useState(false);
+  
+  const languages: LanguageOption[] = [
+    { code: 'en', name: 'English', nativeName: 'English' },
+    { code: 'zh', name: 'Chinese', nativeName: '中文' },
+    { code: 'hi', name: 'Hindi', nativeName: 'हिंदी' },
+    { code: 'es', name: 'Spanish', nativeName: 'Español' },
+    { code: 'ar', name: 'Arabic', nativeName: 'العربية' },
+    { code: 'fr', name: 'French', nativeName: 'Français' }
+  ];
   
   // Load preferred language from localStorage on component mount
   useEffect(() => {
     const savedLang = localStorage.getItem('preferredLanguage');
-    if (savedLang && ['en', 'zh', 'hi', 'es'].includes(savedLang)) {
+    if (savedLang && languages.some(lang => lang.code === savedLang)) {
       i18n.changeLanguage(savedLang);
     }
-  }, [i18n]);
+  }, [i18n, languages]);
   
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
     // Save preference to localStorage
     localStorage.setItem('preferredLanguage', lng);
+    // Close dropdown after selection
+    setIsOpen(false);
   };
 
+  // Get current language display name
+  const getCurrentLanguage = () => {
+    const currentLang = languages.find(lang => lang.code === i18n.language);
+    return currentLang ? currentLang.nativeName : 'English';
+  };
+  
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (!target.closest('.language-switcher')) {
+        setIsOpen(false);
+      }
+    };
+    
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className="language-switcher">
-      <FontAwesomeIcon icon={faGlobe} />
-      <button 
-        onClick={() => changeLanguage('en')} 
-        className={i18n.language === 'en' ? 'active' : ''}
+    <div className={`language-switcher ${isOpen ? 'expanded' : ''}`}>
+      <div 
+        className="language-selector-header"
+        onClick={() => setIsOpen(!isOpen)}
       >
-        EN
-      </button>
-      <button 
-        onClick={() => changeLanguage('zh')} 
-        className={i18n.language === 'zh' ? 'active' : ''}
-      >
-        中文
-      </button>
-      <button 
-        onClick={() => changeLanguage('hi')} 
-        className={i18n.language === 'hi' ? 'active' : ''}
-      >
-        हिंदी
-      </button>
-      <button 
-        onClick={() => changeLanguage('es')} 
-        className={i18n.language === 'es' ? 'active' : ''}
-      >
-        ES
-      </button>
+        <FontAwesomeIcon icon={faGlobe} />
+        <span className="current-language">{getCurrentLanguage()}</span>
+        <FontAwesomeIcon icon={faChevronDown} className={`dropdown-arrow ${isOpen ? 'open' : ''}`} />
+      </div>
+      
+      {isOpen && (
+        <div className="language-dropdown">
+          {languages.map((language) => (
+            <button 
+              key={language.code}
+              onClick={() => changeLanguage(language.code)} 
+              className={i18n.language === language.code ? 'active' : ''}
+            >
+              {language.nativeName}
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

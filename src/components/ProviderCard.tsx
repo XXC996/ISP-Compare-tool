@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FaStar, FaCheck, FaTimes, FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { FaStar, FaStarHalf, FaRegStar, FaCheck, FaTimes, FaChevronDown, FaChevronUp, FaGlobe, FaPhone, FaEnvelope, FaComments } from 'react-icons/fa';
+import { BiTime } from 'react-icons/bi';
 import { ISPProvider } from '../types';
 import '../styles/ProviderCard.css';
 
@@ -8,7 +9,7 @@ interface ProviderCardProps {
   provider: ISPProvider;
   isSelected: boolean;
   onSelect: (provider: ISPProvider) => void;
-  useDiscountPrice: boolean;
+  useDiscountPrice?: boolean;
   selectedSpeed: string;
 }
 
@@ -16,7 +17,7 @@ const ProviderCard: React.FC<ProviderCardProps> = ({
   provider, 
   isSelected, 
   onSelect,
-  useDiscountPrice,
+  useDiscountPrice = false,
   selectedSpeed
 }) => {
   const { t } = useTranslation();
@@ -33,25 +34,28 @@ const ProviderCard: React.FC<ProviderCardProps> = ({
     return `$${price}`;
   };
 
-  // 获取星级评分显示
-  const renderStars = () => {
-    const score = provider.googleReviews.score;
-    if (score === "---" || typeof score !== 'number') return "N/A";
-    
-    const fullStars = Math.floor(score);
-    const hasHalfStar = score % 1 >= 0.5;
-    
+  // Function to render stars based on rating
+  const renderStars = (rating: number) => {
     const stars = [];
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 >= 0.5;
     
-    for (let i = 0; i < fullStars; i++) {
-      stars.push(<FaStar key={`full-${i}`} className="star-icon" />);
+    for (let i = 1; i <= 5; i++) {
+      if (i <= fullStars) {
+        stars.push(<FaStar key={i} className="star" />);
+      } else if (i === fullStars + 1 && hasHalfStar) {
+        stars.push(<FaStarHalf key={i} className="star" />);
+      } else {
+        stars.push(<FaRegStar key={i} className="star" />);
+      }
     }
     
-    if (hasHalfStar) {
-      stars.push(<FaStar key="half" className="star-icon half" />);
-    }
-    
-    return stars;
+    return (
+      <div className="rating-stars">
+        {stars}
+        <span className="rating-number">({rating.toFixed(1)})</span>
+      </div>
+    );
   };
 
   // 检查是否支持特定语言
@@ -87,7 +91,10 @@ const ProviderCard: React.FC<ProviderCardProps> = ({
     <div className={`provider-card ${isSelected ? 'selected' : ''}`}>
       <div className="provider-card-header">
         <img src={provider.logo} alt={`${provider.name} logo`} className="provider-logo" />
-        <div className="provider-name">{provider.name}</div>
+        <div className="provider-name-rating">
+          <h3 className="provider-name">{provider.name}</h3>
+          {renderStars(Number(provider.googleReviews.score))}
+        </div>
         <div className="provider-price">{getPlanPrice()}<span className="price-period">/mo</span></div>
       </div>
       
@@ -99,7 +106,7 @@ const ProviderCard: React.FC<ProviderCardProps> = ({
         <div className="summary-item">
           <div className="summary-label">{t('comparison.rating', 'Rating')}</div>
           <div className="summary-value rating">
-            {renderStars()}
+            {renderStars(Number(provider.googleReviews.score))}
             <span className="review-count">({provider.googleReviews.count})</span>
           </div>
         </div>

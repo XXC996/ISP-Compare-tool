@@ -271,4 +271,44 @@
     width: 100%;
     justify-content: center;
   }
+}
+
+/* Star Rating Styles */
+.star {
+  color: #FFD700;
+  margin-right: 2px;
+}
+
+.star.filled {
+  color: #FFD700;
+}
+
+.star.half {
+  color: #FFD700;
+}
+
+.star.empty {
+  color: #e0e0e0;
+}
+
+.rating-number {
+  margin-left: 5px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Icon Styles */
+.icon {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.check-icon {
+  color: #4CAF50;
+  margin-right: 5px;
+}
+
+.channel-icon {
+  margin-right: 5px;
+  vertical-align: middle;
 } 

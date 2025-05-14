@@ -1,0 +1,161 @@
+.speed-match-container {
+  margin: 20px 0;
+  padding: 0 15px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.speed-match-title {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+}
+
+.speed-match-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.speed-match-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.speed-match-table th {
+  background-color: #f8f9fa;
+  color: #333;
+  font-weight: 600;
+  text-align: center;
+  padding: 14px 10px;
+  border-bottom: 2px solid #ddd;
+  position: sticky;
+  top: 0;
+}
+
+.speed-match-table th.activity-column {
+  text-align: left;
+  width: 200px;
+}
+
+.speed-match-table td {
+  padding: 14px 10px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.speed-match-table td.activity-name {
+  text-align: left;
+  font-weight: 500;
+  color: #333;
+}
+
+.speed-match-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Status cell styles */
+.status-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.status-cell.good {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-cell.moderate {
+  background-color: #fff8e1;
+  color: #f57c00;
+}
+
+.status-cell.bad {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.status-cell.limited {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+.status-icon {
+  margin-right: 5px;
+}
+
+.moderate-icon, .limited-icon {
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .speed-match-table {
+    font-size: 13px;
+  }
+  
+  .status-cell {
+    padding: 5px 6px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .speed-match-title {
+    font-size: 22px;
+  }
+  
+  .speed-match-subtitle {
+    font-size: 14px;
+  }
+  
+  .speed-match-table th,
+  .speed-match-table td {
+    padding: 10px 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .speed-match-title {
+    font-size: 20px;
+  }
+  
+  .speed-match-subtitle {
+    font-size: 13px;
+  }
+  
+  .status-cell {
+    flex-direction: column;
+    text-align: center;
+    padding: 4px;
+  }
+  
+  .status-icon,
+  .moderate-icon,
+  .limited-icon {
+    margin-right: 0;
+    margin-bottom: 3px;
+  }
+} 
