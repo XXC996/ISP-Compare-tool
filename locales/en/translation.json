@@ -1,4 +1,7 @@
 {
+  "app": {
+    "title": "ISP Comparison Tool"
+  },
   "header": {
     "home": "Home",
     "speedMatcher": "Speed Matcher",
