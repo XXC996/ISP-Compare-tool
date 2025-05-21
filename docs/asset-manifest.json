@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/ISP-Compare-tool/static/css/main.4a2817c5.css",
+    "main.js": "/ISP-Compare-tool/static/js/main.c3caa028.js",
+    "index.html": "/ISP-Compare-tool/index.html",
+    "static/media/getFetch.cjs": "/ISP-Compare-tool/static/media/getFetch.7a7a1c81840c96d5a3ea.cjs",
+    "main.4a2817c5.css.map": "/ISP-Compare-tool/static/css/main.4a2817c5.css.map",
+    "main.c3caa028.js.map": "/ISP-Compare-tool/static/js/main.c3caa028.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a2817c5.css",
+    "static/js/main.c3caa028.js"
+  ]
+}
